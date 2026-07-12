@@ -678,6 +678,37 @@ textarea {
   object-fit: cover;
 }
 
+.site-image-gallery {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 18px;
+}
+
+.site-image-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(220, 226, 223, 0.9);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.site-image-card img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.site-image-card figcaption {
+  border-top: 1px solid var(--line);
+  padding: 12px 14px;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
 .card-body {
   padding: 22px;
 }
@@ -1678,6 +1709,7 @@ body[data-page="projects"] .page-hero .section-inner {
   .pillar-grid,
   .impact-grid,
   .country-grid,
+  .site-image-gallery,
   .nih-funding-grid,
   .associated-support-grid,
   .program-panel,

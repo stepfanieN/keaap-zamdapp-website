@@ -443,6 +443,7 @@
         </div>
       </section>
       ${id === "zamdapp" ? renderZamdappInformationSection() : ""}
+      ${id === "trmtrip" ? renderTanzaniaImageGallery() : ""}
       <section class="section section-muted">
         <div class="section-inner">
           ${sectionHeader(label("relatedProjects"))}
@@ -557,6 +558,7 @@
           <div class="grid three">${SITE_DATA.sites.map(renderSiteCard).join("")}</div>
         </div>
       </section>
+      ${renderTanzaniaImageGallery("ORCI Tanzania Campus", "Ocean Road Cancer Institute anchors Tanzania-based oncology, pathology, training, and translational research collaboration within the consortium.")}
     `;
   }
 
@@ -620,6 +622,28 @@
           </div>
         </div>
       </section>
+    `;
+  }
+
+  function renderTanzaniaImageGallery(title = "Tanzania Research Site", intro = "Ocean Road Cancer Institute provides an institutional home for Tanzania-based consortium research, training, oncology, pathology, and translational research activities.") {
+    return `
+      <section class="section section-muted tanzania-gallery-section">
+        <div class="section-inner">
+          ${sectionHeader(title, intro)}
+          <div class="site-image-gallery">
+            ${SITE_DATA.tanzaniaImages.map(renderSiteImageCard).join("")}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderSiteImageCard(image) {
+    return `
+      <figure class="site-image-card">
+        <img src="${esc(image.src)}" alt="${esc(image.alt)}">
+        <figcaption>${esc(image.caption)}</figcaption>
+      </figure>
     `;
   }
 
@@ -897,7 +921,7 @@
   function renderSiteCard(site) {
     return `
       <article class="card image-card">
-        <img src="assets/img/site-placeholder.svg" alt="${esc(label("siteAlt"))}">
+        <img src="${esc(site.image || "assets/img/site-placeholder.svg")}" alt="${esc(site.imageAlt || label("siteAlt"))}">
         <div class="card-body">
           <h3>${esc(site.country)}</h3>
           <p>${esc(site.summary)}</p>

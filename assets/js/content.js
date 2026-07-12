@@ -223,7 +223,9 @@ const SITE_DATA = {
       country: "Tanzania",
       institutions: ["Ocean Road Cancer Institute", "Collaborating clinical and research sites"],
       summary: "Tanzania-based activities include Kaposi sarcoma research, oncology collaboration, pathology, diagnostics, training, and translational research.",
-      programs: ["KEAAP", "TRMTRIP/TAMTRP"]
+      programs: ["KEAAP", "TRMTRIP/TAMTRP"],
+      image: "assets/img/orci-front.jpg",
+      imageAlt: "Ocean Road Cancer Institute building in Dar es Salaam, Tanzania"
     },
     {
       country: "United States",
@@ -250,6 +252,23 @@ const SITE_DATA = {
         { src: "assets/img/cancer-diseases-hospital-logo.jpg", alt: "Cancer Diseases Hospital logo" }
       ],
       description: "Zambia-based clinical and institutional partners supporting pathology, diagnostics, laboratory, epidemiologic, clinical, and data-focused research on HIV-associated malignancies."
+    }
+  ],
+  tanzaniaImages: [
+    {
+      src: "assets/img/orci-front.jpg",
+      alt: "Ocean Road Cancer Institute front building in Dar es Salaam",
+      caption: "Ocean Road Cancer Institute, Dar es Salaam"
+    },
+    {
+      src: "assets/img/orci-block-d-entrance.jpg",
+      alt: "Ocean Road Cancer Institute Block D entrance",
+      caption: "ORCI Block D entrance"
+    },
+    {
+      src: "assets/img/orci-heritage-building.jpg",
+      alt: "Historic Ocean Road Cancer Institute building",
+      caption: "Historic ORCI campus building"
     }
   ],
   homePillars: [
