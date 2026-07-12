@@ -122,8 +122,8 @@ const SITE_DATA = {
       },
       {
         src: "assets/img/kaposi-sarcoma-clinic.jpg",
-        alt: "Kaposi Sarcoma Clinic at University Teaching Hospitals in Zambia",
-        caption: "Kaposi Sarcoma Clinic, UTHs"
+        alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia",
+        caption: "Kaposi Sarcoma Laboratory, UTHs"
       },
       {
         src: "assets/img/kaposi-sarcoma-research-lab.jpg",
@@ -431,8 +431,8 @@ const SITE_DATA = {
     },
     {
       src: "assets/img/kaposi-sarcoma-clinic.jpg",
-      alt: "Kaposi Sarcoma Clinic at University Teaching Hospitals in Zambia",
-      caption: "Kaposi Sarcoma Clinic, UTHs"
+      alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia",
+      caption: "Kaposi Sarcoma Laboratory, UTHs"
     },
     {
       src: "assets/img/kaposi-sarcoma-research-lab.jpg",
