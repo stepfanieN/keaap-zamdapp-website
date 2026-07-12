@@ -422,7 +422,7 @@ const SITE_DATA = {
         focus: "Research training and capacity strengthening in AIDS malignancies, pathology, cancer diagnostics, and HIV-associated cancer research in Zambia."
       },
       {
-        acronym: "TAMTRP / TRMTRIP Tanzania",
+        acronym: "TAMTRP / TRMTRIP",
         fullName: "Tanzania AIDS Malignancies Training and Research Program",
         award: "D43TW012277",
         institute: "Fogarty International Center, with NIH partner support from the National Cancer Institute",
