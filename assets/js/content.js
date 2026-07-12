@@ -552,6 +552,91 @@ const SITE_DATA = {
       { name: "Dr. Aaron Mujajati", role: "Steering / Advisory Committee Member", affiliation: "Consultant Internal Medicine Physician, University of Zambia School of Medicine", image: "assets/img/profile-placeholder.svg", orcid: "" }
     ]
   },
+  organizationChart: {
+    image: "assets/img/consortium-organization-chart.png",
+    alt: "Consortium organization chart showing principal investigators, steering committee, external advisory panel, administrative core, data management and integration core, developmental core, and project teams.",
+    sections: [
+      {
+        title: "Principal Investigators",
+        type: "Leadership",
+        people: [
+          { name: "Charles Wood", affiliation: "LSU" },
+          { name: "Owen Ngalamika", affiliation: "UTH" },
+          { name: "Julius Mwaiselage", affiliation: "ORCI" }
+        ]
+      },
+      {
+        title: "Steering Committee",
+        type: "Governance",
+        people: [
+          { name: "Principal Investigators" },
+          { name: "Associate Directors" },
+          { name: "Project Leads" },
+          { name: "Core Leads" }
+        ]
+      },
+      {
+        title: "External Advisory Panel",
+        type: "Governance",
+        people: [{ name: "External Advisory Panel" }]
+      },
+      {
+        title: "Administrative Core",
+        type: "Core",
+        people: [
+          { name: "Directors", role: "Principal Investigators" },
+          { name: "John West", affiliation: "LSU", role: "Associate Director" },
+          { name: "Catherine Chunda-Liyoka", affiliation: "UTH", role: "Associate Director" },
+          { name: "John Ngowi", affiliation: "ORCI", role: "Associate Director" }
+        ]
+      },
+      {
+        title: "Data Management and Integration Core",
+        type: "Core",
+        people: [
+          { name: "Tekeda Ferguson", affiliation: "LSU", role: "Director" },
+          { name: "Stepfanie Siyumbwa", affiliation: "UTH", role: "Director" },
+          { name: "Chacha Mwita", affiliation: "ORCI", role: "Director" }
+        ]
+      },
+      {
+        title: "Developmental Core",
+        type: "Core",
+        people: [
+          { name: "Chipepo Kankasa", affiliation: "UTH", role: "Director" },
+          { name: "Julius Mwaiselage", affiliation: "ORCI", role: "Director" },
+          { name: "John West", affiliation: "LSU", role: "Director" }
+        ]
+      },
+      {
+        title: "Project 1: Early KS, staging, and care",
+        type: "Project",
+        people: [
+          { name: "Crispin Kahesa", affiliation: "ORCI" },
+          { name: "Susan Msadabwe", affiliation: "CDH" },
+          { name: "Mike Hagensee", affiliation: "LSU" }
+        ]
+      },
+      {
+        title: "Project 2: KS immune response",
+        type: "Project",
+        people: [
+          { name: "Salum Lidenge", affiliation: "ORCI" },
+          { name: "Owen Ngalamika", affiliation: "UTH" },
+          { name: "John West", affiliation: "LSU" }
+        ]
+      },
+      {
+        title: "Project 3: KS reservoirs",
+        type: "Project",
+        people: [
+          { name: "Peter Julius", affiliation: "UTH" },
+          { name: "For Yue Tso", affiliation: "LSU" },
+          { name: "Angela Mlole", affiliation: "ORCI" }
+        ]
+      }
+    ]
+  },
   publications: [
     { title: "Disseminated iatrogenic upper gastrointestinal Kaposi sarcoma following prolonged steroid use in a patient with Crohn's disease: a case report", authors: "Makupa G, Serventi F, Mwakipunda L, Nnko G, Liwa E, Lidenge SJ, Herman A, Gasper L, Mwasamwaja A, Kombole B, Mremi A", year: "2026", journal: "J Med Case Rep. 2026 Mar 12;20(1):244", doi: "10.1186/s13256-026-05937-9", pubmed: "PMID: 41821115; PMCID: PMC13147781", program: "KEAAP", topic: "Kaposi sarcoma", country: "Tanzania" },
     { title: "Institutional management factors influencing compliance with National Cancer Treatment Guidelines for cervical cancer: a case study from ocean road cancer institute, Tanzania", authors: "Tupa F, Ruwaichi T, Luoga P, Mwaiselage J, Lidenge SJ, Tungu M", year: "2025", journal: "BMC Cancer. 2025 Aug 2;25(1):1259", doi: "10.1186/s12885-025-14702-y", pubmed: "PMID: 40753383; PMCID: PMC12317438", program: "KEAAP", topic: "Cervical cancer", country: "Tanzania" },
@@ -609,6 +694,7 @@ const SITE_I18N = {
       ["Sites", "sites.html", "sites"],
       ["Facilities", "facilities.html", "facilities"],
       ["Fellows & Training", "training.html", "training"],
+      ["Organization", "organization.html", "organization"],
       ["Publications", "publications.html", "publications"],
       ["News", "news.html", "news"],
       ["Contact", "contact.html", "contact"]
@@ -797,6 +883,7 @@ const SITE_I18N = {
         servicesTitle: "Services and capabilities"
       },
       training: { eyebrow: "Fellows & Training", title: "Fellows and Training", intro: "Fellows, student trainees, clinicians, laboratory scientists, pathologists, and data-focused teams participate in mentorship, workshops, degree training, and project-based research." },
+      organization: { eyebrow: "Organization", title: "Consortium Organization", intro: "The consortium structure brings together principal investigators, project teams, core leadership, the steering committee, and the external advisory panel.", directoryTitle: "Organization Directory", directoryIntro: "Structured listing of the leadership, advisory, core, and project groups shown in the organization chart." },
       publications: { eyebrow: "Publications", title: "Publication database", intro: "Search and filter scholarly outputs by program, year, topic, and country. Citations include DOI, PMID, and PMCID details." },
       news: { eyebrow: "News", title: "News and Updates", intro: "Updates for training workshops, fellows' achievements, publications, conference presentations, new collaborations, and program milestones." },
       contact: { eyebrow: "Contact", title: "Contact the consortium", intro: "For collaboration, training, publication, or program-related inquiries, please contact the consortium team using the form below.", formTitle: "Program inquiry", consent: "I consent to being contacted about this inquiry.", success: "Thank you. The consortium team will review your inquiry." },
@@ -823,6 +910,7 @@ const SITE_I18N = {
       ["Maeneo", "sites.html", "sites"],
       ["Miundombinu", "facilities.html", "facilities"],
       ["Watafiti & Mafunzo", "training.html", "training"],
+      ["Muundo", "organization.html", "organization"],
       ["Machapisho", "publications.html", "publications"],
       ["Habari", "news.html", "news"],
       ["Mawasiliano", "contact.html", "contact"]
@@ -1011,6 +1099,7 @@ const SITE_I18N = {
         servicesTitle: "Huduma na uwezo"
       },
       training: { eyebrow: "Watafiti & Mafunzo", title: "Watafiti na Mafunzo", intro: "Watafiti, wanafunzi, wahudumu wa kliniki, wanasayansi wa maabara, wataalamu wa patholojia, na timu za data hushiriki katika ushauri, warsha, mafunzo ya shahada, na utafiti wa miradi." },
+      organization: { eyebrow: "Muundo", title: "Muundo wa Muungano", intro: "Muundo wa muungano unaunganisha wachunguzi wakuu, timu za miradi, uongozi wa vitengo, kamati ya uongozi, na jopo la ushauri wa nje.", directoryTitle: "Orodha ya Muundo", directoryIntro: "Orodha ya vikundi vya uongozi, ushauri, vitengo, na miradi vinavyoonyeshwa katika chati ya muundo." },
       publications: { eyebrow: "Machapisho", title: "Hifadhidata ya machapisho", intro: "Tafuta na chuja matokeo ya kisayansi kwa programu, mwaka, mada, na nchi. Nukuu zinajumuisha maelezo ya DOI, PMID, na PMCID." },
       news: { eyebrow: "Habari", title: "Habari na Taarifa", intro: "Taarifa kuhusu warsha za mafunzo, mafanikio ya watafiti, machapisho, mawasilisho ya mikutano, ushirikiano mpya, na hatua za programu." },
       contact: { eyebrow: "Mawasiliano", title: "Wasiliana na muungano", intro: "Kwa maswali kuhusu ushirikiano, mafunzo, machapisho, au programu, tafadhali wasiliana na timu ya muungano kupitia fomu hapa chini.", formTitle: "Swali kuhusu programu", consent: "Ninakubali kuwasiliana nami kuhusu swali hili.", success: "Asante. Timu ya muungano itapitia swali lako." },

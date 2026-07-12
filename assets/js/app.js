@@ -171,6 +171,7 @@
     } else if (pageKey === "data-core") main.innerHTML = renderDataCore();
     else if (pageKey === "pathology") main.innerHTML = renderPathology();
     else if (pageKey === "news") main.innerHTML = renderNews();
+    else if (pageKey === "organization") main.innerHTML = renderOrganization();
     else if (pageKey === "contact") {
       main.innerHTML = renderContact();
       bindContactForm();
@@ -1187,6 +1188,51 @@
         </aside>
       </div>
       </section>
+    `;
+  }
+
+  function renderOrganization() {
+    const copy = pageCopy("organization");
+    const chart = SITE_DATA.organizationChart;
+    return `
+      ${pageHero(copy)}
+      <section class="section organization-chart-section">
+        <div class="section-inner">
+          <figure class="organization-chart-figure">
+            <img src="${esc(chart.image)}" alt="${esc(chart.alt)}">
+          </figure>
+        </div>
+      </section>
+      <section class="section section-muted organization-directory-section">
+        <div class="section-inner">
+          ${sectionHeader(copy.directoryTitle, copy.directoryIntro)}
+          <div class="organization-grid">
+            ${chart.sections.map(renderOrganizationCard).join("")}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderOrganizationCard(section) {
+    return `
+      <article class="card organization-card">
+        <p class="tag">${esc(section.type)}</p>
+        <h3>${esc(section.title)}</h3>
+        <ul>
+          ${section.people.map(renderOrganizationPerson).join("")}
+        </ul>
+      </article>
+    `;
+  }
+
+  function renderOrganizationPerson(person) {
+    const details = [person.role, person.affiliation].filter(Boolean).join(", ");
+    return `
+      <li>
+        <strong>${esc(person.name)}</strong>
+        ${details ? `<span>${esc(details)}</span>` : ""}
+      </li>
     `;
   }
 

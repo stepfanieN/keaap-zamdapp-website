@@ -1859,6 +1859,86 @@ body[data-page="projects"] .page-hero .section-inner {
   background: rgba(226, 138, 54, 0.12);
 }
 
+.organization-chart-section {
+  padding-bottom: 34px;
+}
+
+.organization-chart-figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.organization-chart-figure img {
+  display: block;
+  width: 100%;
+  max-height: 780px;
+  object-fit: contain;
+  background: var(--white);
+}
+
+.organization-directory-section {
+  padding-top: 64px;
+}
+
+.organization-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.organization-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.organization-card .tag,
+.organization-card h3 {
+  margin: 0;
+}
+
+.organization-card h3 {
+  color: var(--navy);
+  font-family: var(--heading);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.organization-card ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.organization-card li {
+  display: grid;
+  gap: 2px;
+  border-top: 1px solid rgba(120, 146, 163, 0.18);
+  padding-top: 9px;
+}
+
+.organization-card li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.organization-card strong {
+  color: var(--navy);
+  font-weight: 850;
+}
+
+.organization-card span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
 .profile-card img {
   width: 84px;
   height: 84px;
@@ -2091,6 +2171,7 @@ body[data-page="projects"] .page-hero .section-inner {
   .grid.three,
   .nih-funding-grid,
   .associated-support-grid,
+  .organization-grid,
   .about-values-grid,
   .pillar-grid,
   .impact-grid,
@@ -2214,6 +2295,7 @@ body[data-page="projects"] .page-hero .section-inner {
   .program-image-feature,
   .nih-funding-grid,
   .associated-support-grid,
+  .organization-grid,
   .program-panel,
   .detail-layout,
   .footer-inner,
