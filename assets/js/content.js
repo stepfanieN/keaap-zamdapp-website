@@ -79,8 +79,14 @@ const SITE_DATA = {
   amtripPage: {
     intro: "AMTRIP Zambia is the AIDS Malignancies Training and Research International Program. Presented as a ZAMDAPP sub-program, AMTRIP strengthens Zambia's research infrastructure for HIV-associated malignancies and other cancers through training, mentorship, technical capacity development, and collaborative research.",
     background: "AMTRIP was established through the University of Zambia, University Teaching Hospitals, Cancer Diseases Hospital, and long-standing U.S. academic collaborations. The program responds to the need for Zambia-led capacity in cancer epidemiology, diagnostics, pathology, molecular genetics, cancer genomics, biostatistics, bioinformatics, and laboratory research methods.",
-    goal: "The program goal is to enhance Zambia's cancer research infrastructure and workforce by training biomedical researchers, clinicians, laboratory scientists, pathologists, and data-focused trainees in methods relevant to HIV-associated malignancies and other locally important cancers.",
+    goal: "The program goal is to increase the number of Zambian biomedical researchers, clinicians, laboratory scientists, pathologists, and data-focused trainees with skills needed to advance Zambia's cancer research agenda, including research on HIV-associated malignancies and other locally important cancers.",
     focusAreas: ["Cancer epidemiology", "Pathology and diagnostics", "Molecular diagnostics", "Cancer genomics", "Viral oncology", "Bioinformatics", "Biostatistics", "Research ethics", "Scientific writing", "Mentorship"],
+    trainingPlan: [
+      { title: "Long-term master's, MMed, MS, or MPH training", text: "Planned training includes four long-term master's-level, MMed, MS, or MPH pathways for Zambian trainees." },
+      { title: "Long-term doctoral training", text: "Planned doctoral-level training includes two PhD pathways connected to cancer research and related biomedical disciplines." },
+      { title: "Medium-term skills training", text: "Medium-term training supports ten focused skills-development opportunities in laboratory, pathology, data, clinical, and research methods." },
+      { title: "Short-term workshops", text: "Short courses and workshops are expected to reach more than 250 participants through in-country and partner-supported training activities." }
+    ],
     pathways: [
       {
         title: "Graduate Degree Training",
@@ -95,8 +101,36 @@ const SITE_DATA = {
         text: "Workshops address grant writing, manuscript preparation, mentoring, biostatistics, ethics, bioinformatics, molecular pathology, laboratory methods, viral oncology, and career development."
       }
     ],
-    partners: ["University of Zambia", "University Teaching Hospitals", "Cancer Diseases Hospital", "University of Nebraska partners", "City of Hope", "Regional African cancer research collaborators"],
-    impact: "AMTRIP contributes to a broader regional training environment by supporting Zambia-led cancer research capacity, research mentorship, technical skill development, and collaboration across African and U.S. partner institutions.",
+    recentTraining: [
+      { title: "Research and regulatory methods", text: "Recent activities include training in research methods, regulatory and ethics requirements, good clinical practice, qualitative research designs, and clinical trials." },
+      { title: "Scientific communication", text: "The program supports presentation skills, public speaking, journal critique, grant writing, manuscript preparation, and other scholarly communication skills." },
+      { title: "Pathology and implementation science", text: "Training activities include cancer pathology education, implementation science, safeguarding, mentorship, and practical research support." }
+    ],
+    partners: ["University of Zambia", "University Teaching Hospitals", "Cancer Diseases Hospital", "LSU Health New Orleans", "University of Nebraska partners", "City of Hope", "Regional African cancer research collaborators"],
+    impact: "AMTRIP contributes to a broader regional training environment by supporting Zambia-led cancer research capacity, mentorship, technical skill development, technology transfer, and collaboration across African and U.S. partner institutions.",
+    outcomes: [
+      { title: "Collaborative research capacity", text: "AMTRIP supports sustained collaboration among Zambian and U.S. partners in cancer research, diagnostics, pathology, laboratory science, and data-focused work." },
+      { title: "Workforce development", text: "The program supports emerging investigators, clinicians, laboratory scientists, pathologists, and data professionals through structured mentorship and training pathways." },
+      { title: "Sustainable infrastructure", text: "Sustainability priorities include partner ownership, new local and international partnerships, postgraduate mentorship, and continued strengthening of research infrastructure at UTHs and UNZA." }
+    ],
+    facilitiesIntro: "AMTRIP training and research activities are connected to Zambia-based clinical and research infrastructure, including University Teaching Hospitals and Kaposi sarcoma research and training spaces.",
+    facilities: [
+      {
+        src: "assets/img/uth-main-entrance.jpg",
+        alt: "University Teaching Hospital entrance in Zambia",
+        caption: "University Teaching Hospitals, Zambia"
+      },
+      {
+        src: "assets/img/kaposi-sarcoma-clinic.jpg",
+        alt: "Kaposi sarcoma clinic and training building in Zambia",
+        caption: "Kaposi sarcoma clinic and training site"
+      },
+      {
+        src: "assets/img/kaposi-sarcoma-research-lab.jpg",
+        alt: "Kaposi sarcoma research and training laboratory building in Zambia",
+        caption: "Kaposi sarcoma research and training laboratory"
+      }
+    ],
     publications: "AMTRIP-related publications and trainee outputs are listed on the Publications page."
   },
   projects: [
@@ -217,7 +251,9 @@ const SITE_DATA = {
       country: "Zambia",
       institutions: ["University Teaching Hospitals", "Cancer Diseases Hospital", "University of Zambia", "Local research partners"],
       summary: "Zambia-based activities include clinical, pathology, diagnostic, laboratory, epidemiologic, and data-focused research on HIV-associated malignancies.",
-      programs: ["KEAAP", "ZAMDAPP", "AMTRIP"]
+      programs: ["KEAAP", "ZAMDAPP", "AMTRIP"],
+      image: "assets/img/uth-main-entrance.jpg",
+      imageAlt: "University Teaching Hospital entrance in Zambia"
     },
     {
       country: "Tanzania",
@@ -269,6 +305,23 @@ const SITE_DATA = {
       src: "assets/img/orci-heritage-building.jpg",
       alt: "Historic Ocean Road Cancer Institute building",
       caption: "Historic ORCI campus building"
+    }
+  ],
+  zambiaImages: [
+    {
+      src: "assets/img/uth-main-entrance.jpg",
+      alt: "University Teaching Hospital entrance in Zambia",
+      caption: "University Teaching Hospitals, Zambia"
+    },
+    {
+      src: "assets/img/kaposi-sarcoma-clinic.jpg",
+      alt: "Kaposi sarcoma clinic and training building in Zambia",
+      caption: "Kaposi sarcoma clinic and training site"
+    },
+    {
+      src: "assets/img/kaposi-sarcoma-research-lab.jpg",
+      alt: "Kaposi sarcoma research and training laboratory building in Zambia",
+      caption: "Kaposi sarcoma research and training laboratory"
     }
   ],
   homePillars: [

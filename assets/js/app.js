@@ -494,8 +494,21 @@
       </section>
       <section class="section">
         <div class="section-inner">
+          ${sectionHeader("Training Plan", "AMTRIP combines degree pathways, focused technical training, and short-course learning for Zambia-based cancer research capacity building.")}
+          <div class="grid four">${page.trainingPlan.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
           ${sectionHeader("Training Pathways")}
           <div class="grid three">${page.pathways.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      ${renderImageGallery(page.facilities, "Zambia Facilities and Training Sites", page.facilitiesIntro, "section-muted amtrip-facilities-section")}
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Recent Training Activities", "Recent training activities include research methods, ethics and regulatory preparation, scientific communication, pathology education, and implementation science.")}
+          <div class="grid three">${page.recentTraining.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
         </div>
       </section>
       <section class="section section-muted">
@@ -517,6 +530,12 @@
         </div>
       </section>
       <section class="section section-muted">
+        <div class="section-inner">
+          ${sectionHeader("Capacity and Sustainability", "AMTRIP supports collaborative research capacity, workforce development, and sustainable research infrastructure in Zambia.")}
+          <div class="grid three">${page.outcomes.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section">
         <div class="section-inner">
           ${sectionHeader("Publications and Outputs", page.publications)}
           <div class="grid three">${projects.map(renderProjectCard).join("")}</div>
@@ -558,7 +577,8 @@
           <div class="grid three">${SITE_DATA.sites.map(renderSiteCard).join("")}</div>
         </div>
       </section>
-      ${renderTanzaniaImageGallery("ORCI Tanzania Campus", "Ocean Road Cancer Institute anchors Tanzania-based oncology, pathology, training, and translational research collaboration within the consortium.")}
+      ${renderZambiaImageGallery("Zambia Research and Training Sites", "University Teaching Hospitals and Kaposi sarcoma research and training spaces support Zambia-based clinical, laboratory, pathology, and training activities.")}
+      ${renderTanzaniaImageGallery("ORCI Tanzania Campus", "Ocean Road Cancer Institute anchors Tanzania-based oncology, pathology, training, and translational research collaboration within the consortium.", "tanzania-gallery-section")}
     `;
   }
 
@@ -625,13 +645,21 @@
     `;
   }
 
-  function renderTanzaniaImageGallery(title = "Tanzania Research Site", intro = "Ocean Road Cancer Institute provides an institutional home for Tanzania-based consortium research, training, oncology, pathology, and translational research activities.") {
+  function renderZambiaImageGallery(title = "Zambia Research Site", intro = "University Teaching Hospitals, Cancer Diseases Hospital, and University of Zambia partners support Zambia-based consortium research, training, pathology, diagnostics, and data-focused activities.", className = "section-muted zambia-gallery-section") {
+    return renderImageGallery(SITE_DATA.zambiaImages, title, intro, className);
+  }
+
+  function renderTanzaniaImageGallery(title = "Tanzania Research Site", intro = "Ocean Road Cancer Institute provides an institutional home for Tanzania-based consortium research, training, oncology, pathology, and translational research activities.", className = "section-muted tanzania-gallery-section") {
+    return renderImageGallery(SITE_DATA.tanzaniaImages, title, intro, className);
+  }
+
+  function renderImageGallery(images, title, intro, className = "section-muted") {
     return `
-      <section class="section section-muted tanzania-gallery-section">
+      <section class="section ${esc(className)}">
         <div class="section-inner">
           ${sectionHeader(title, intro)}
           <div class="site-image-gallery">
-            ${SITE_DATA.tanzaniaImages.map(renderSiteImageCard).join("")}
+            ${images.map(renderSiteImageCard).join("")}
           </div>
         </div>
       </section>
