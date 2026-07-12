@@ -467,7 +467,8 @@ body[data-page="about"] .page-hero {
 .about-hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
-  gap: 46px;
+  column-gap: 46px;
+  row-gap: 20px;
   align-items: center;
 }
 
@@ -485,10 +486,23 @@ body[data-page="about"] .page-hero {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-top: 10px;
+}
+
+.about-highlight-panel {
   margin-top: 28px;
 }
 
-.about-country-row span {
+.about-highlight-kicker {
+  margin: 0 0 10px;
+  color: var(--orange);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-spotlight-button {
   border: 1px solid rgba(120, 146, 163, 0.34);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.78);
@@ -496,6 +510,47 @@ body[data-page="about"] .page-hero {
   padding: 7px 12px;
   font-size: 0.84rem;
   font-weight: 850;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.about-spotlight-button:hover,
+.about-spotlight-button:focus-visible,
+.about-spotlight-button.is-active {
+  border-color: rgba(226, 138, 54, 0.78);
+  background: rgba(226, 138, 54, 0.14);
+  color: var(--navy);
+}
+
+.about-spotlight-button:focus-visible {
+  outline: 3px solid rgba(226, 138, 54, 0.28);
+  outline-offset: 3px;
+}
+
+.about-spotlight-button.is-active {
+  transform: translateY(-1px);
+}
+
+.about-spotlight-story {
+  grid-column: 1;
+  max-width: 620px;
+  margin-top: 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(120, 146, 163, 0.26);
+}
+
+.about-spotlight-story h2 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: clamp(1.08rem, 1.8vw, 1.34rem);
+  line-height: 1.25;
+}
+
+.about-spotlight-story p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
 }
 
 .about-hero-image,
@@ -508,6 +563,8 @@ body[data-page="about"] .page-hero {
 }
 
 .about-hero-image {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   box-shadow: 0 20px 54px rgba(18, 50, 74, 0.14);
 }
 
@@ -515,6 +572,18 @@ body[data-page="about"] .page-hero {
   width: 100%;
   height: 310px;
   object-fit: cover;
+  transition: opacity 180ms ease, transform 220ms ease;
+}
+
+.about-hero-image[data-fit="contain"] img {
+  object-fit: contain;
+  padding: 42px;
+  background: var(--white);
+}
+
+.about-hero-image.is-changing img {
+  opacity: 0.36;
+  transform: translateX(14px) scale(0.985);
 }
 
 .about-hero-image figcaption,
@@ -2086,8 +2155,22 @@ body[data-page="projects"] .page-hero .section-inner {
     height: 230px;
   }
 
+  .about-hero-image,
+  .about-spotlight-story {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about-hero-image[data-fit="contain"] img {
+    padding: 28px;
+  }
+
   .about-country-row {
-    margin-top: 20px;
+    margin-top: 12px;
+  }
+
+  .about-spotlight-story {
+    margin-top: 0;
   }
 
   .about-thesis,

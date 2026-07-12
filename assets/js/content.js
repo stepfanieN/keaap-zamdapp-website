@@ -705,6 +705,43 @@ const SITE_I18N = {
         ],
         countryLabel: "Consortium countries",
         heroImage: { src: "assets/img/tamtrp-orci-team.jpg", alt: "TAMTRP and ORCI team members at Ocean Road Cancer Institute", caption: "TAMTRP and ORCI training community" },
+        spotlightPrompt: "Highlight for more",
+        spotlightInstruction: "Choose a partnership story",
+        spotlights: [
+          {
+            label: "Full Consortium",
+            title: "Full consortium story",
+            text: "Placeholder for an approved full-consortium story connecting Zambia, Tanzania, and United States partners through HIV-associated cancer research, training, pathology, data systems, and institutional collaboration.",
+            src: "assets/img/tamtrp-orci-team.jpg",
+            alt: "TAMTRP and ORCI team members at Ocean Road Cancer Institute",
+            caption: "Full consortium story placeholder"
+          },
+          {
+            label: "Zambia",
+            title: "Zambia: clinical, pathology, and laboratory research capacity",
+            text: "Zambia anchors consortium work through University Teaching Hospitals, Cancer Diseases Hospital, University of Zambia partners, and teams working across clinical research, pathology, diagnostics, Kaposi sarcoma, OSSN, data quality, and training.",
+            src: "assets/img/uth-main-entrance.jpg",
+            alt: "University Teaching Hospital entrance in Zambia",
+            caption: "University Teaching Hospitals, Zambia"
+          },
+          {
+            label: "Tanzania",
+            title: "Tanzania: oncology care, training, and institutional research infrastructure",
+            text: "Tanzania activities are centered around Ocean Road Cancer Institute and collaborating academic partners, with work spanning oncology, pathology, research training, autopsy and tissue research capacity, and HIV-associated cancer studies.",
+            src: "assets/img/orci-front.jpg",
+            alt: "Ocean Road Cancer Institute building in Dar es Salaam, Tanzania",
+            caption: "Ocean Road Cancer Institute, Tanzania"
+          },
+          {
+            label: "United States",
+            title: "United States: academic partnership and methodological support",
+            text: "U.S. partner institutions contribute academic collaboration, mentorship, laboratory and analytic expertise, data systems, biostatistics, and training support while working with African-led research priorities and institutional leadership.",
+            src: "assets/img/lsu-health-new-orleans-logo.png",
+            alt: "LSU Health New Orleans logo",
+            caption: "United States academic partner institutions",
+            fit: "contain"
+          }
+        ],
         workTitle: "How the consortium works",
         workIntro: "The public-facing platform is organized around institutional partnership, research practice, and training capacity rather than a single project or site.",
         fundingContextTitle: "Funding and institutional context",
@@ -874,6 +911,43 @@ const SITE_I18N = {
         ],
         countryLabel: "Nchi za muungano",
         heroImage: { src: "assets/img/tamtrp-orci-team.jpg", alt: "Wanachama wa timu ya TAMTRP na ORCI katika Ocean Road Cancer Institute", caption: "Jamii ya mafunzo ya TAMTRP na ORCI" },
+        spotlightPrompt: "Chagua ili kuona zaidi",
+        spotlightInstruction: "Chagua simulizi ya ushirikiano",
+        spotlights: [
+          {
+            label: "Muungano Mzima",
+            title: "Simulizi ya muungano mzima",
+            text: "Nafasi ya kuweka simulizi iliyoidhinishwa ya muungano mzima inayounganisha washirika wa Zambia, Tanzania, na Marekani kupitia utafiti wa saratani zinazohusiana na VVU, mafunzo, patholojia, mifumo ya data, na ushirikiano wa taasisi.",
+            src: "assets/img/tamtrp-orci-team.jpg",
+            alt: "Wanachama wa timu ya TAMTRP na ORCI katika Ocean Road Cancer Institute",
+            caption: "Nafasi ya simulizi ya muungano mzima"
+          },
+          {
+            label: "Zambia",
+            title: "Zambia: uwezo wa utafiti wa kliniki, patholojia, na maabara",
+            text: "Zambia inabeba kazi za muungano kupitia University Teaching Hospitals, Cancer Diseases Hospital, washirika wa University of Zambia, na timu zinazofanya utafiti wa kliniki, patholojia, uchunguzi, Kaposi sarcoma, OSSN, ubora wa data, na mafunzo.",
+            src: "assets/img/uth-main-entrance.jpg",
+            alt: "Mlango wa University Teaching Hospital Zambia",
+            caption: "University Teaching Hospitals, Zambia"
+          },
+          {
+            label: "Tanzania",
+            title: "Tanzania: huduma za oncology, mafunzo, na miundombinu ya utafiti",
+            text: "Shughuli za Tanzania zinajikita katika Ocean Road Cancer Institute na washirika wa kitaaluma, zikiwa na kazi katika oncology, patholojia, mafunzo ya utafiti, uwezo wa autopsy na utafiti wa tishu, na tafiti za saratani zinazohusiana na VVU.",
+            src: "assets/img/orci-front.jpg",
+            alt: "Jengo la Ocean Road Cancer Institute Dar es Salaam, Tanzania",
+            caption: "Ocean Road Cancer Institute, Tanzania"
+          },
+          {
+            label: "Marekani",
+            title: "Marekani: ushirikiano wa kitaaluma na msaada wa mbinu",
+            text: "Taasisi washirika za Marekani huchangia ushirikiano wa kitaaluma, ushauri, utaalamu wa maabara na uchambuzi, mifumo ya data, biostatistiki, na msaada wa mafunzo kwa kuzingatia vipaumbele na uongozi wa utafiti wa Afrika.",
+            src: "assets/img/lsu-health-new-orleans-logo.png",
+            alt: "Nembo ya LSU Health New Orleans",
+            caption: "Taasisi washirika za kitaaluma Marekani",
+            fit: "contain"
+          }
+        ],
         workTitle: "Jinsi muungano unavyofanya kazi",
         workIntro: "Jukwaa la umma limepangwa kuzunguka ushirikiano wa taasisi, mbinu za utafiti, na uwezo wa mafunzo badala ya mradi mmoja au eneo moja.",
         fundingContextTitle: "Muktadha wa ufadhili na taasisi",

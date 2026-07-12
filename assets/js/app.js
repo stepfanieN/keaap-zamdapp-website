@@ -139,7 +139,10 @@
   function renderMain() {
     const main = $("#main");
     if (pageKey === "home") main.innerHTML = renderHome();
-    else if (pageKey === "about") main.innerHTML = renderAbout();
+    else if (pageKey === "about") {
+      main.innerHTML = renderAbout();
+      bindAboutSpotlight();
+    }
     else if (pageKey === "programs") main.innerHTML = renderPrograms();
     else if (pageKey === "amtrip") main.innerHTML = renderAmtripPage();
     else if (pageKey === "trmtrip") main.innerHTML = renderTrmtripPage();
@@ -367,26 +370,81 @@
   }
 
   function renderAboutHero(copy) {
+    const spotlights = copy.spotlights || [];
+    const activeSpotlight = spotlights[0] || copy.heroImage;
     return `
       <section class="page-hero about-hero">
         <div class="section-inner about-hero-layout">
-          <div>
+          <div class="about-hero-copy">
             <p class="eyebrow">${esc(copy.eyebrow)}</p>
             <h1>${esc(copy.title)}</h1>
             <p class="lead">${esc(copy.intro)}</p>
-            <div class="about-country-row" aria-label="${esc(copy.countryLabel)}">
-              <span>Zambia</span>
-              <span>Tanzania</span>
-              <span>United States</span>
-            </div>
+            ${spotlights.length ? `
+              <div class="about-highlight-panel">
+                <p class="about-highlight-kicker">${esc(copy.spotlightPrompt || copy.countryLabel)}</p>
+                <div class="about-country-row" aria-label="${esc(copy.spotlightInstruction || copy.countryLabel)}">
+                  ${spotlights.map((item, index) => `
+                    <button class="about-spotlight-button ${index === 0 ? "is-active" : ""}" type="button" data-about-spotlight="${index}" aria-pressed="${index === 0 ? "true" : "false"}">
+                      ${esc(item.label)}
+                    </button>
+                  `).join("")}
+                </div>
+              </div>
+            ` : ""}
           </div>
-          <figure class="about-hero-image">
-            <img src="${esc(copy.heroImage.src)}" alt="${esc(copy.heroImage.alt)}">
-            <figcaption>${esc(copy.heroImage.caption)}</figcaption>
+          <figure class="about-hero-image" data-fit="${esc(activeSpotlight.fit || "cover")}">
+            <img src="${esc(activeSpotlight.src || copy.heroImage.src)}" alt="${esc(activeSpotlight.alt || copy.heroImage.alt)}" id="about-spotlight-image">
+            <figcaption id="about-spotlight-caption">${esc(activeSpotlight.caption || copy.heroImage.caption)}</figcaption>
           </figure>
+          ${spotlights.length ? `
+            <article class="about-spotlight-story" aria-live="polite">
+              <h2 id="about-spotlight-title">${esc(activeSpotlight.title || "")}</h2>
+              <p id="about-spotlight-text">${esc(activeSpotlight.text || "")}</p>
+            </article>
+          ` : ""}
         </div>
       </section>
     `;
+  }
+
+  function bindAboutSpotlight() {
+    const copy = pageCopy("about");
+    const spotlights = copy.spotlights || [];
+    if (!spotlights.length) return;
+
+    const buttons = $$("[data-about-spotlight]");
+    const image = $("#about-spotlight-image");
+    const caption = $("#about-spotlight-caption");
+    const title = $("#about-spotlight-title");
+    const text = $("#about-spotlight-text");
+    const figure = $(".about-hero-image");
+    if (!buttons.length || !image || !caption || !title || !text || !figure) return;
+
+    function setSpotlight(index) {
+      const next = spotlights[index];
+      if (!next) return;
+
+      buttons.forEach((button, buttonIndex) => {
+        const active = buttonIndex === index;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+
+      figure.classList.add("is-changing");
+      window.setTimeout(() => {
+        image.src = next.src;
+        image.alt = next.alt;
+        figure.dataset.fit = next.fit || "cover";
+        caption.textContent = next.caption;
+        title.textContent = next.title;
+        text.textContent = next.text;
+        figure.classList.remove("is-changing");
+      }, 120);
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => setSpotlight(Number(button.dataset.aboutSpotlight)));
+    });
   }
 
   function renderAboutStatement(title, text) {
