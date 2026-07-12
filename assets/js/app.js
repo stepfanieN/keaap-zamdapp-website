@@ -318,31 +318,153 @@
   function renderAbout() {
     const copy = pageCopy("about");
     return `
-      ${pageHero(copy)}
-      <section class="section">
-        <div class="section-inner split-intro">
-          <div>
-            <h2>${esc(label("mission"))}</h2>
-            <p>${esc(copy.mission)}</p>
-          </div>
-          <div>
-            <h2>${esc(label("vision"))}</h2>
-            <p>${esc(copy.vision)}</p>
-          </div>
-        </div>
-      </section>
-      ${renderNihFundingSection()}
-      <section class="section section-muted">
+      ${renderAboutHero(copy)}
+      <section class="section about-thesis-section">
         <div class="section-inner">
-          ${sectionHeader(copy.valuesTitle, copy.body)}
-          ${renderThemeGrid(copy.values)}
+          <div class="about-thesis">
+            <div>
+              <p class="eyebrow">${esc(copy.thesisEyebrow)}</p>
+              <h2>${esc(copy.thesisTitle)}</h2>
+              <p>${esc(copy.thesisText)}</p>
+            </div>
+            <div class="about-statement-grid" aria-label="${esc(copy.valuesTitle)}">
+              ${renderAboutStatement(label("mission"), copy.mission)}
+              ${renderAboutStatement(label("vision"), copy.vision)}
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section section-muted about-place-section">
+        <div class="section-inner about-place-layout">
+          <div>
+            <p class="eyebrow">${esc(copy.imagePanelTitle)}</p>
+            <h2>${esc(copy.placeTitle)}</h2>
+            <p>${esc(copy.placeText)}</p>
+          </div>
+          <div class="about-photo-mosaic">
+            ${copy.images.map(renderAboutImage).join("")}
+          </div>
+        </div>
+      </section>
+      <section class="section about-values-section">
         <div class="section-inner">
-          <div class="grid three">${copy.sections.map(([title, text]) => renderInfoCard(title, text)).join("")}</div>
+          ${sectionHeader(copy.valuesTitle, copy.valuesIntro)}
+          <div class="about-values-grid">
+            ${copy.valueDetails.map(renderAboutValue).join("")}
+          </div>
         </div>
       </section>
+      <section class="section section-muted about-work-section">
+        <div class="section-inner">
+          ${sectionHeader(copy.workTitle, copy.workIntro)}
+          <div class="about-work-list">
+            ${copy.sections.map(renderAboutWorkItem).join("")}
+          </div>
+        </div>
+      </section>
+      ${renderAboutFundingSection(copy)}
+    `;
+  }
+
+  function renderAboutHero(copy) {
+    return `
+      <section class="page-hero about-hero">
+        <div class="section-inner about-hero-layout">
+          <div>
+            <p class="eyebrow">${esc(copy.eyebrow)}</p>
+            <h1>${esc(copy.title)}</h1>
+            <p class="lead">${esc(copy.intro)}</p>
+            <div class="about-country-row" aria-label="${esc(copy.countryLabel)}">
+              <span>Zambia</span>
+              <span>Tanzania</span>
+              <span>United States</span>
+            </div>
+          </div>
+          <figure class="about-hero-image">
+            <img src="${esc(copy.heroImage.src)}" alt="${esc(copy.heroImage.alt)}">
+            <figcaption>${esc(copy.heroImage.caption)}</figcaption>
+          </figure>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderAboutStatement(title, text) {
+    return `
+      <article class="about-statement">
+        <h3>${esc(title)}</h3>
+        <p>${esc(text)}</p>
+      </article>
+    `;
+  }
+
+  function renderAboutImage(image, index) {
+    return `
+      <figure class="about-mosaic-item ${index === 0 ? "is-large" : ""}">
+        <img src="${esc(image.src)}" alt="${esc(image.alt)}">
+        <figcaption>${esc(image.caption)}</figcaption>
+      </figure>
+    `;
+  }
+
+  function renderAboutValue([title, text]) {
+    return `
+      <article class="about-value">
+        <h3>${esc(title)}</h3>
+        <p>${esc(text)}</p>
+      </article>
+    `;
+  }
+
+  function renderAboutWorkItem([title, text], index) {
+    return `
+      <article class="about-work-item">
+        <span aria-hidden="true">${String(index + 1).padStart(2, "0")}</span>
+        <div>
+          <h3>${esc(title)}</h3>
+          <p>${esc(text)}</p>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderAboutFundingSection(copy) {
+    const funding = SITE_DATA.nihFunding;
+    return `
+      <section class="section section-compact about-funding-section" id="nih-funding">
+        <div class="section-inner">
+          ${sectionHeader(copy.fundingContextTitle, copy.fundingContextIntro)}
+          <div class="about-funding-list">
+            ${funding.programs.map(renderAboutFundingDetail).join("")}
+          </div>
+          <div class="associated-support about-associated-support">
+            <div class="associated-support-header">
+              <p class="eyebrow">${esc(funding.associatedTitle)}</p>
+              <h3>${esc(funding.associatedTitle)}</h3>
+            </div>
+            <div class="associated-support-grid">
+              ${funding.associated.map(renderAssociatedSupportCard).join("")}
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderAboutFundingDetail(program) {
+    return `
+      <details class="about-funding-detail">
+        <summary>
+          <span>${esc(program.acronym)}</span>
+          <strong>${esc(program.fullName)}</strong>
+        </summary>
+        <dl>
+          <dt>NIH Award</dt><dd>${esc(program.award)}</dd>
+          <dt>Duration</dt><dd>${esc(program.duration)}</dd>
+          <dt>Institute/Center</dt><dd>${esc(program.institute)}</dd>
+          <dt>Focus</dt><dd>${esc(program.focus)}</dd>
+        </dl>
+      </details>
     `;
   }
 
