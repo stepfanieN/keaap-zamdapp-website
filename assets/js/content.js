@@ -127,8 +127,8 @@ const SITE_DATA = {
       },
       {
         src: "assets/img/kaposi-sarcoma-research-lab.jpg",
-        alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia",
-        caption: "Kaposi Sarcoma Laboratory, UTHs"
+        alt: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory at University Teaching Hospitals in Zambia",
+        caption: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory, UTHs"
       }
     ],
     publications: "AMTRIP-related publications and trainee outputs are listed on the Publications page."
@@ -365,8 +365,8 @@ const SITE_DATA = {
     },
     {
       src: "assets/img/kaposi-sarcoma-research-lab.jpg",
-      alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia",
-      caption: "Kaposi Sarcoma Laboratory, UTHs"
+      alt: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory at University Teaching Hospitals in Zambia",
+      caption: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory, UTHs"
     }
   ],
   homePillars: [
@@ -701,7 +701,7 @@ const SITE_I18N = {
         images: [
           { src: "assets/img/orci-front.jpg", alt: "Ocean Road Cancer Institute building in Dar es Salaam, Tanzania", caption: "Ocean Road Cancer Institute, Tanzania" },
           { src: "assets/img/uth-main-entrance.jpg", alt: "University Teaching Hospital entrance in Zambia", caption: "University Teaching Hospitals, Zambia" },
-          { src: "assets/img/kaposi-sarcoma-research-lab.jpg", alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia", caption: "Kaposi Sarcoma Laboratory, UTHs" }
+          { src: "assets/img/kaposi-sarcoma-research-lab.jpg", alt: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory at University Teaching Hospitals in Zambia", caption: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory, UTHs" }
         ],
         countryLabel: "Consortium countries",
         heroImage: { src: "assets/img/tamtrp-orci-team.jpg", alt: "TAMTRP and ORCI team members at Ocean Road Cancer Institute", caption: "TAMTRP and ORCI training community" },
@@ -907,7 +907,7 @@ const SITE_I18N = {
         images: [
           { src: "assets/img/orci-front.jpg", alt: "Jengo la Ocean Road Cancer Institute Dar es Salaam, Tanzania", caption: "Ocean Road Cancer Institute, Tanzania" },
           { src: "assets/img/uth-main-entrance.jpg", alt: "Mlango wa University Teaching Hospital Zambia", caption: "University Teaching Hospitals, Zambia" },
-          { src: "assets/img/kaposi-sarcoma-research-lab.jpg", alt: "Maabara ya Kaposi Sarcoma katika University Teaching Hospitals Zambia", caption: "Kaposi Sarcoma Laboratory, UTHs" }
+          { src: "assets/img/kaposi-sarcoma-research-lab.jpg", alt: "Kliniki ya Kaposi Sarcoma, patholojia, biorepository, na maabara katika University Teaching Hospitals Zambia", caption: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory, UTHs" }
         ],
         countryLabel: "Nchi za muungano",
         heroImage: { src: "assets/img/tamtrp-orci-team.jpg", alt: "Wanachama wa timu ya TAMTRP na ORCI katika Ocean Road Cancer Institute", caption: "Jamii ya mafunzo ya TAMTRP na ORCI" },
