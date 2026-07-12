@@ -1726,41 +1726,6 @@ body[data-page="projects"] .page-hero .section-inner {
   padding-top: 0;
 }
 
-.organization-chart-figure {
-  margin: 0 0 24px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--white);
-  box-shadow: var(--shadow);
-}
-
-.organization-chart-figure img {
-  width: 100%;
-  max-height: 760px;
-  object-fit: contain;
-  background: var(--white);
-}
-
-.org-chart-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.org-chart-card {
-  padding: 20px;
-}
-
-.org-chart-card h3 {
-  margin-bottom: 12px;
-}
-
-.org-chart-card ul {
-  display: grid;
-  gap: 6px;
-}
-
 .team-block-heading h2 {
   margin: 0 0 20px;
   color: var(--navy);
@@ -1778,6 +1743,55 @@ body[data-page="projects"] .page-hero .section-inner {
 
 .governance-card {
   min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-content: start;
+  text-align: left;
+}
+
+.governance-card figure {
+  margin: 0;
+}
+
+.profile-card.governance-card img {
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--soft);
+}
+
+.governance-card .profile-card-body {
+  display: grid;
+  gap: 8px;
+}
+
+.governance-card .tag {
+  margin: 0;
+}
+
+.governance-card h3,
+.governance-card p {
+  margin: 0;
+}
+
+.orcid-link {
+  justify-self: start;
+  margin-top: 4px;
+  border: 1px solid rgba(120, 146, 163, 0.34);
+  border-radius: 999px;
+  padding: 5px 10px;
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.orcid-link:hover,
+.orcid-link:focus-visible {
+  border-color: rgba(226, 138, 54, 0.78);
+  background: rgba(226, 138, 54, 0.12);
 }
 
 .profile-card img {
@@ -2133,7 +2147,6 @@ body[data-page="projects"] .page-hero .section-inner {
   .country-grid,
   .site-image-gallery,
   .program-image-feature,
-  .org-chart-grid,
   .nih-funding-grid,
   .associated-support-grid,
   .program-panel,
@@ -2316,6 +2329,15 @@ body[data-page="projects"] .page-hero .section-inner {
   .profile-card img {
     width: 72px;
     height: 72px;
+  }
+
+  .profile-card.governance-card {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card.governance-card img {
+    width: 100%;
+    height: 220px;
   }
 
   .profile-card dl {

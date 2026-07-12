@@ -1070,20 +1070,25 @@
     const governance = SITE_DATA.teamGovernance;
     return `
       ${pageHero({ eyebrow: "Team", title: "Team and Collaborators", intro: "The consortium brings together investigators, clinicians, pathologists, laboratory scientists, data specialists, trainees, and institutional partners across Zambia, Tanzania, and the United States." })}
-      ${renderOrganizationChartSection(governance.organizationChart)}
       <section class="section">
         <div class="section-inner">
-          ${sectionHeader("Administration", "Program leadership and coordination for consortium research and training activities.")}
+          ${sectionHeader("Administration")}
           <div class="grid three">${governance.administration.map(renderGovernanceProfileCard).join("")}</div>
         </div>
       </section>
       <section class="section section-muted">
         <div class="section-inner">
-          ${sectionHeader("Advisory Board Members", "The advisory board brings expertise across oncology, public health, medicine, population sciences, and institutional research leadership.")}
-          <div class="grid two">${governance.advisoryBoard.map(renderGovernanceProfileCard).join("")}</div>
+          ${sectionHeader("Zambia Administrative Core")}
+          <div class="grid three">${governance.zambiaAdministrativeCore.map(renderGovernanceProfileCard).join("")}</div>
         </div>
       </section>
       <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Steering / Advisory Committee")}
+          <div class="grid three">${governance.steeringAdvisory.map(renderGovernanceProfileCard).join("")}</div>
+        </div>
+      </section>
+      <section class="section section-muted">
         <div class="section-inner split-intro">
           <div>
             <div class="team-block-heading">
@@ -1091,60 +1096,24 @@
             </div>
             ${renderThemeGrid(governance.institutions)}
           </div>
-          <div>
-            ${renderInfoCard("Future Vision", governance.futureVision)}
-          </div>
         </div>
       </section>
-      <section class="section section-muted section-compact">
-        <div class="section-inner">
-          <div class="grid three">
-            ${renderInfoCard("Contact", `Name: ${governance.contact.name}`)}
-            ${renderInfoCard("Address", governance.contact.address)}
-            ${renderInfoCard("Partners", governance.contact.partners)}
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="section-inner">
-          ${sectionHeader("Program Teams", "Collaborating teams contribute through research, diagnostics, data systems, training, mentorship, and dissemination activities.")}
-          <div class="grid two">${topLevelPrograms().map((program) => renderInfoCard(program.name, program.fullName, program.page)).join("")}</div>
-        </div>
-      </section>
-    `;
-  }
-
-  function renderOrganizationChartSection(chart) {
-    return `
-      <section class="section">
-        <div class="section-inner">
-          ${sectionHeader("Organization Chart", "Consortium leadership, advisory, project, and core structures.")}
-          <figure class="organization-chart-figure">
-            <img src="${esc(chart.image)}" alt="${esc(chart.alt)}">
-          </figure>
-          <div class="org-chart-grid">${chart.sections.map(renderOrganizationChartCard).join("")}</div>
-        </div>
-      </section>
-    `;
-  }
-
-  function renderOrganizationChartCard(section) {
-    return `
-      <article class="card org-chart-card">
-        <h3>${esc(section.title)}</h3>
-        <ul>${section.people.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
-      </article>
     `;
   }
 
   function renderGovernanceProfileCard(person) {
+    const image = person.image || "assets/img/profile-placeholder.svg";
+    const orcid = person.orcid || "";
     return `
       <article class="card profile-card governance-card">
-        <img src="assets/img/profile-placeholder.svg" alt="${esc(person.name)} profile image">
-        <div>
+        <figure>
+          <img src="${esc(image)}" alt="${esc(person.name)} profile image">
+        </figure>
+        <div class="profile-card-body">
           <p class="tag">${esc(person.role)}</p>
           <h3>${esc(person.name)}</h3>
           <p>${esc(person.affiliation)}</p>
+          ${orcid ? `<a class="orcid-link" href="${esc(orcid)}" target="_blank" rel="noopener">ORCID</a>` : ""}
         </div>
       </article>
     `;

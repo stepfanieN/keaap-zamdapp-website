@@ -454,48 +454,6 @@ const SITE_DATA = {
     { name: "Alumni Placeholder", country: "Zambia", program: "AMTRIP", period: "2024-2025", area: "Clinical outcomes and mentorship", bio: "Alumni public bio placeholder.", output: "Selected output placeholder", role: "Approved current role placeholder" }
   ],
   teamGovernance: {
-    organizationChart: {
-      image: "assets/img/consortium-organization-chart.png",
-      alt: "Consortium organization chart showing principal investigators, steering committee, external advisory panel, project teams, administrative core, data management and integration core, and career development core.",
-      sections: [
-        {
-          title: "Principal Investigators",
-          people: ["Charles Wood (LSU)", "Owen Ngalamika (UTH)", "Julius Mwaiselage (ORCI)"]
-        },
-        {
-          title: "Steering Committee",
-          people: ["Principal Investigators", "Associate Directors", "Project Leads", "Core Leads"]
-        },
-        {
-          title: "External Advisory Panel",
-          people: ["External advisory members"]
-        },
-        {
-          title: "Administrative Core",
-          people: ["Directors: Principal Investigators", "Associate Directors: John West (LSU), Catherine Chunda-Liyoka (UTH), John Ngowi (ORCI)"]
-        },
-        {
-          title: "Data Management and Integration Core",
-          people: ["Tekeda Ferguson (LSU)", "Stepfanie Siyumbwa (UTH)", "Chacha Mwita (ORCI)"]
-        },
-        {
-          title: "Career Development Core",
-          people: ["Chipepo Kankasa (UTH)", "Julius Mwaiselage (ORCI)", "John West (LSU)"]
-        },
-        {
-          title: "Project 1: Early KS, Staging, and Care",
-          people: ["Crispin Kahesa (ORCI)", "Susan Msadabwe (CDH)", "Mike Hagensee (LSU)"]
-        },
-        {
-          title: "Project 2: KS Immune Response",
-          people: ["Salum Lidenge (ORCI)", "Owen Ngalamika (UTH)", "John West (LSU)"]
-        },
-        {
-          title: "Project 3: KS Reservoirs",
-          people: ["Peter Julius (UTH)", "For Yue Tso (LSU)", "Angela Mlole (ORCI)"]
-        }
-      ]
-    },
     institutions: [
       "Ocean Road Cancer Institute (ORCI), Tanzania",
       "Muhimbili University of Health and Allied Sciences (MUHAS)",
@@ -504,27 +462,24 @@ const SITE_DATA = {
       "University of Zambia School of Medicine"
     ],
     administration: [
-      { name: "Dr. Charles Wood", role: "Principal Investigator", affiliation: "LSU" },
-      { name: "Dr. Owen Ngalamika", role: "Principal Investigator", affiliation: "University Teaching Hospitals" },
-      { name: "Dr. Julius Mwaiselage", role: "Principal Investigator", affiliation: "Ocean Road Cancer Institute" },
-      { name: "Dr. Salum Lidenge", role: "Program Coordinator", affiliation: "Ocean Road Cancer Institute, Dar es Salaam, Tanzania" }
+      { name: "Dr. Charles Wood", role: "Principal Investigator", affiliation: "LSU", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Owen Ngalamika", role: "Principal Investigator", affiliation: "University Teaching Hospitals", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Julius Mwaiselage", role: "Principal Investigator", affiliation: "Ocean Road Cancer Institute", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Salum Lidenge", role: "Program Coordinator, Tanzania", affiliation: "Ocean Road Cancer Institute, Dar es Salaam, Tanzania", image: "assets/img/profile-placeholder.svg", orcid: "" }
     ],
-    advisoryBoard: [
-      { name: "Dr. Augusto Ochoa", role: "Chair", affiliation: "Department of Interdisciplinary Oncology, LSU Health New Orleans" },
-      { name: "Dr. Mary Mayige", role: "Advisory Board Member", affiliation: "Tanzania National Institute for Medical Research" },
-      { name: "Dr. Andrea Pembe", role: "Advisory Board Member", affiliation: "Muhimbili University of Health and Allied Sciences (MUHAS)" },
-      { name: "Dr. Khamza Maunda", role: "Advisory Board Member", affiliation: "Ocean Road Cancer Institute (ORCI)" },
-      { name: "Dr. Nicolas Mwale", role: "Advisory Board Member", affiliation: "Assistant Dean, University of Zambia School of Medicine" },
-      { name: "Dr. Victoria Seewaldt", role: "Advisory Board Member", affiliation: "Department of Population Sciences, City of Hope" },
-      { name: "Dr. William Bertrand", role: "Advisory Board Member", affiliation: "School of Public Health, Tulane University" },
-      { name: "Dr. Aaron Mujajati", role: "Advisory Board Member", affiliation: "Consultant Internal Medicine Physician, University of Zambia School of Medicine" }
+    zambiaAdministrativeCore: [
+      { name: "Mr. Irwin Kabinje", role: "Project Coordinator, Zambia", affiliation: "Zambia Administrative Core", image: "assets/img/profile-placeholder.svg", orcid: "" }
     ],
-    futureVision: "TAMTRP seeks to build a sustainable cancer research ecosystem in Tanzania that integrates genomics, data science, and clinical research. The program aims to establish independent trainee-led research groups, strengthen institutional collaborations, and support long-term impact on cancer research in Sub-Saharan Africa.",
-    contact: {
-      name: "Dr. Salum Lidenge",
-      address: "Ocean Road Cancer Institute, Dar es Salaam, Tanzania",
-      partners: "ORCI | MUHAS | LSUHSC-NO"
-    }
+    steeringAdvisory: [
+      { name: "Dr. Augusto Ochoa", role: "Chair, Steering / Advisory Committee", affiliation: "Department of Interdisciplinary Oncology, LSU Health New Orleans", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Mary Mayige", role: "Steering / Advisory Committee Member", affiliation: "Tanzania National Institute for Medical Research", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Andrea Pembe", role: "Steering / Advisory Committee Member", affiliation: "Muhimbili University of Health and Allied Sciences (MUHAS)", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Khamza Maunda", role: "Steering / Advisory Committee Member", affiliation: "Ocean Road Cancer Institute (ORCI)", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Nicolas Mwale", role: "Steering / Advisory Committee Member", affiliation: "Assistant Dean, University of Zambia School of Medicine", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Victoria Seewaldt", role: "Steering / Advisory Committee Member", affiliation: "Department of Population Sciences, City of Hope", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. William Bertrand", role: "Steering / Advisory Committee Member", affiliation: "School of Public Health, Tulane University", image: "assets/img/profile-placeholder.svg", orcid: "" },
+      { name: "Dr. Aaron Mujajati", role: "Steering / Advisory Committee Member", affiliation: "Consultant Internal Medicine Physician, University of Zambia School of Medicine", image: "assets/img/profile-placeholder.svg", orcid: "" }
+    ]
   },
   publications: [
     { title: "Disseminated iatrogenic upper gastrointestinal Kaposi sarcoma following prolonged steroid use in a patient with Crohn's disease: a case report", authors: "Makupa G, Serventi F, Mwakipunda L, Nnko G, Liwa E, Lidenge SJ, Herman A, Gasper L, Mwasamwaja A, Kombole B, Mremi A", year: "2026", journal: "J Med Case Rep. 2026 Mar 12;20(1):244", doi: "10.1186/s13256-026-05937-9", pubmed: "PMID: 41821115; PMCID: PMC13147781", program: "KEAAP", topic: "Kaposi sarcoma", country: "Tanzania" },
