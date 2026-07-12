@@ -1323,11 +1323,23 @@ body[data-page="projects"] .page-hero .section-inner {
   padding-top: 0;
 }
 
+.team-block-heading h2 {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-family: var(--heading);
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
 .profile-card {
   display: grid;
   grid-template-columns: 84px 1fr;
   gap: 18px;
   padding: 20px;
+}
+
+.governance-card {
+  min-height: 100%;
 }
 
 .profile-card img {

@@ -336,6 +336,36 @@ const SITE_DATA = {
     { name: "Student Trainee Placeholder", country: "Zambia", program: "ZAMDAPP", period: "2025-present", area: "Student-led research and data quality", bio: "Short public bio placeholder for team review.", output: "Student project placeholder", role: "Training role placeholder" },
     { name: "Alumni Placeholder", country: "Zambia", program: "AMTRIP", period: "2024-2025", area: "Clinical outcomes and mentorship", bio: "Alumni public bio placeholder.", output: "Selected output placeholder", role: "Approved current role placeholder" }
   ],
+  teamGovernance: {
+    institutions: [
+      "Ocean Road Cancer Institute (ORCI), Tanzania",
+      "Muhimbili University of Health and Allied Sciences (MUHAS)",
+      "Stanley S. Scott Cancer Center, LSUHSC-New Orleans, USA",
+      "Tulane University School of Public Health",
+      "University of Zambia School of Medicine"
+    ],
+    administration: [
+      { name: "Dr. Julius Mwaiselage", role: "Program Director", affiliation: "Ocean Road Cancer Institute and consortium leadership" },
+      { name: "Dr. Charles Wood", role: "Program Director", affiliation: "Consortium leadership" },
+      { name: "Dr. Salum Lidenge", role: "Program Coordinator", affiliation: "Ocean Road Cancer Institute, Dar es Salaam, Tanzania" }
+    ],
+    advisoryBoard: [
+      { name: "Dr. Augusto Ochoa", role: "Chair", affiliation: "Department of Interdisciplinary Oncology, LSU Health New Orleans" },
+      { name: "Dr. Mary Mayige", role: "Advisory Board Member", affiliation: "Tanzania National Institute for Medical Research" },
+      { name: "Dr. Andrea Pembe", role: "Advisory Board Member", affiliation: "Muhimbili University of Health and Allied Sciences (MUHAS)" },
+      { name: "Dr. Khamza Maunda", role: "Advisory Board Member", affiliation: "Ocean Road Cancer Institute (ORCI)" },
+      { name: "Dr. Nicolas Mwale", role: "Advisory Board Member", affiliation: "Assistant Dean, University of Zambia School of Medicine" },
+      { name: "Dr. Victoria Seewaldt", role: "Advisory Board Member", affiliation: "Department of Population Sciences, City of Hope" },
+      { name: "Dr. William Bertrand", role: "Advisory Board Member", affiliation: "School of Public Health, Tulane University" },
+      { name: "Dr. Aaron Mujajati", role: "Advisory Board Member", affiliation: "Consultant Internal Medicine Physician, University of Zambia School of Medicine" }
+    ],
+    futureVision: "TAMTRP seeks to build a sustainable cancer research ecosystem in Tanzania that integrates genomics, data science, and clinical research. The program aims to establish independent trainee-led research groups, strengthen institutional collaborations, and support long-term impact on cancer research in Sub-Saharan Africa.",
+    contact: {
+      name: "Dr. Salum Lidenge",
+      address: "Ocean Road Cancer Institute, Dar es Salaam, Tanzania",
+      partners: "ORCI | MUHAS | LSUHSC-NO"
+    }
+  },
   publications: [
     { title: "Disseminated iatrogenic upper gastrointestinal Kaposi sarcoma following prolonged steroid use in a patient with Crohn's disease: a case report", authors: "Makupa G, Serventi F, Mwakipunda L, Nnko G, Liwa E, Lidenge SJ, Herman A, Gasper L, Mwasamwaja A, Kombole B, Mremi A", year: "2026", journal: "J Med Case Rep. 2026 Mar 12;20(1):244", doi: "10.1186/s13256-026-05937-9", pubmed: "PMID: 41821115; PMCID: PMC13147781", program: "KEAAP", topic: "Kaposi sarcoma", country: "Tanzania" },
     { title: "Institutional management factors influencing compliance with National Cancer Treatment Guidelines for cervical cancer: a case study from ocean road cancer institute, Tanzania", authors: "Tupa F, Ruwaichi T, Luoga P, Mwaiselage J, Lidenge SJ, Tungu M", year: "2025", journal: "BMC Cancer. 2025 Aug 2;25(1):1259", doi: "10.1186/s12885-025-14702-y", pubmed: "PMID: 40753383; PMCID: PMC12317438", program: "KEAAP", topic: "Cervical cancer", country: "Tanzania" },
