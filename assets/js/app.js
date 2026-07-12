@@ -142,6 +142,7 @@
     else if (pageKey === "about") main.innerHTML = renderAbout();
     else if (pageKey === "programs") main.innerHTML = renderPrograms();
     else if (pageKey === "amtrip") main.innerHTML = renderAmtripPage();
+    else if (pageKey === "trmtrip") main.innerHTML = renderTrmtripPage();
     else if (programPageMap[pageKey]) main.innerHTML = renderProgramDetail(programPageMap[pageKey]);
     else if (pageKey === "projects") {
       main.innerHTML = renderProjects();
@@ -545,6 +546,109 @@
     `;
   }
 
+  function renderTrmtripPage() {
+    const program = SITE_DATA.programs.find((item) => item.id === "trmtrip");
+    const page = SITE_DATA.tamtrpPage;
+    const projects = SITE_DATA.projects.filter((project) => program.projectIds.includes(project.id));
+    return `
+      ${pageHero({ eyebrow: "ZAMDAPP sub-program", title: program.name, intro: page.intro })}
+      <section class="breadcrumb-band">
+        <div class="section-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="zamdapp.html">ZAMDAPP</a>
+            <span aria-hidden="true">/</span>
+            <span>${esc(program.name)}</span>
+          </nav>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner split-intro">
+          <div>
+            <p class="eyebrow">Background and Rationale</p>
+            <h2>${esc(program.fullName)}</h2>
+            <p>${esc(page.background)}</p>
+          </div>
+          <div class="feature-band compact-feature">
+            <div>
+              <p class="eyebrow">Program Objective</p>
+              <h2>Training and research capacity in Tanzania</h2>
+              <p>${esc(page.goal)}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-muted">
+        <div class="section-inner">
+          ${sectionHeader("Short-Term Goals", "TAMTRP focuses on strengthening ORCI research infrastructure and mentored Tanzania-led cancer research training.")}
+          <div class="grid two">${page.shortTermGoals.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Specific Aims")}
+          <div class="grid three">${page.aims.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section section-muted">
+        <div class="section-inner">
+          ${sectionHeader("Training Plan", "The program combines long-term degree training, medium-term technical training, and short-course workshops for Tanzanian trainees and collaborating teams.")}
+          <div class="grid four">${page.trainingPlan.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Training Tracks", "Training areas span clinical research, public health, laboratory science, cancer genomics, data systems, and translational research.")}
+          <div class="grid four">${page.trainingTracks.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section section-muted">
+        <div class="section-inner">
+          ${renderProgramImageFeature(page.teamImage, "TAMTRP Training Community", "The Tanzania training program brings together ORCI teams, trainees, mentors, and collaborating partners to strengthen cancer research capacity.")}
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Progress Highlights", "Selected progress highlights from the Tanzania training program include degree training, medium-term placements, workshop activity, and responsible conduct of research training.")}
+          <div class="grid four">${page.progress.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      ${renderTanzaniaImageGallery("ORCI Tanzania Campus", "Ocean Road Cancer Institute anchors Tanzania-based oncology, pathology, training, and translational research collaboration within the consortium.", "section-muted tanzania-gallery-section")}
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Partners and Collaborations", "TAMTRP is presented as a collaborative training initiative within the ZAMDAPP ecosystem.")}
+          ${renderThemeGrid(page.partners)}
+        </div>
+      </section>
+      <section class="section section-muted">
+        <div class="section-inner">
+          <div class="feature-band">
+            <div>
+              <p class="eyebrow">Program Impact</p>
+              <h2>Preparing for genomics-informed cancer research</h2>
+              <p>${esc(page.impact)}</p>
+            </div>
+            <a class="button button-primary" href="training.html">${esc(pageCopy("training").title)}</a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Capacity and Sustainability", "TAMTRP supports trainee-led research capacity, institutional collaboration, and research infrastructure in Tanzania.")}
+          <div class="grid three">${page.sustainability.map((item) => renderInfoCard(item.title, item.text)).join("")}</div>
+        </div>
+      </section>
+      <section class="section section-muted">
+        <div class="section-inner">
+          ${sectionHeader("Publications and Outputs", page.publications)}
+          <div class="grid three">${projects.map(renderProjectCard).join("")}</div>
+          <div class="section-action"><a class="button button-primary" href="publications.html">${esc(pageCopy("publications").title)}</a></div>
+        </div>
+      </section>
+    `;
+  }
+
   function renderProjects() {
     const copy = pageCopy("projects");
     return `
@@ -672,6 +776,22 @@
         <img src="${esc(image.src)}" alt="${esc(image.alt)}">
         <figcaption>${esc(image.caption)}</figcaption>
       </figure>
+    `;
+  }
+
+  function renderProgramImageFeature(image, title, text) {
+    return `
+      <div class="program-image-feature">
+        <figure class="site-image-card program-feature-figure">
+          <img src="${esc(image.src)}" alt="${esc(image.alt)}">
+          <figcaption>${esc(image.caption)}</figcaption>
+        </figure>
+        <div>
+          <p class="eyebrow">Program Community</p>
+          <h2>${esc(title)}</h2>
+          <p>${esc(text)}</p>
+        </div>
+      </div>
     `;
   }
 

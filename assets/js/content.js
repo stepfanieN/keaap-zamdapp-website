@@ -46,10 +46,10 @@ const SITE_DATA = {
       fullName: "Tanzania AIDS Malignancies Training and Research International Program",
       type: "Training program",
       countries: ["Tanzania", "United States"],
-      themes: ["Training", "Oncology", "Pathology", "Epidemiology", "Biobanking"],
-      summary: "TRMTRIP/TAMTRP supports HIV-associated cancer research and training capacity in Tanzania through oncology, diagnostics, pathology, epidemiology, and translational research.",
-      description: "TRMTRIP/TAMTRP supports HIV-associated cancer research and training capacity in Tanzania. The program works with Tanzanian and U.S. partners to strengthen oncology research, diagnostics, pathology, cancer epidemiology, biostatistics, and translational research.",
-      focus: ["HIV-associated cancer research", "Oncology and pathology training", "Cancer diagnostics", "Epidemiology", "Biostatistics", "Biobanking", "Cancer registry and clinical research", "Translational research"],
+      themes: ["Training", "Oncology", "Pathology", "Epidemiology", "Biobanking", "Cancer genomics"],
+      summary: "TRMTRIP/TAMTRP supports HIV-associated and infection-associated cancer research and training capacity in Tanzania through oncology, diagnostics, pathology, epidemiology, genomics, biostatistics, and translational research.",
+      description: "TRMTRIP/TAMTRP supports cancer research and training capacity in Tanzania, with emphasis on HIV-associated malignancies, infection-associated cancers, diagnostics, cancer genomics, epidemiology, biostatistics, pathology, and translational research. The program works through Ocean Road Cancer Institute and U.S. academic partners to strengthen Tanzania-led research infrastructure and mentorship.",
+      focus: ["HIV-associated cancer research", "Infection-associated malignancies", "Oncology and pathology training", "Molecular detection and diagnostics", "Cancer genomics", "Bioinformatics and computational genomics", "Epidemiology and biostatistics", "Biobanking and cancer registry capacity", "Clinical and translational research"],
       projectIds: ["trmtrip-training-projects"]
     }
   ],
@@ -133,6 +133,51 @@ const SITE_DATA = {
     ],
     publications: "AMTRIP-related publications and trainee outputs are listed on the Publications page."
   },
+  tamtrpPage: {
+    intro: "TRMTRIP/TAMTRP Tanzania is a ZAMDAPP-linked training program focused on strengthening Tanzania-led cancer research capacity through Ocean Road Cancer Institute and U.S. academic collaboration.",
+    background: "The program builds on long-standing collaboration between Ocean Road Cancer Institute and the Stanley S. Scott Cancer Center at LSU Health New Orleans. It is designed to strengthen Tanzania's capacity for research on HIV-associated malignancies, infection-associated cancers, cancer diagnostics, cancer genomics, epidemiology, biostatistics, pathology, and translational research.",
+    goal: "The overall objective is to enhance cancer research capacity at Tanzania's major cancer research institution, Ocean Road Cancer Institute, while increasing the number of trained Tanzanian cancer researchers prepared for future work in HIV-associated cancer diagnostics, genomics, and therapy-related research.",
+    shortTermGoals: [
+      { title: "Research and training infrastructure", text: "Enhance ORCI's cancer research and training infrastructure for Tanzania-led studies in oncology, diagnostics, genomics, epidemiology, and translational research." },
+      { title: "Mentored research training", text: "Support a training and mentoring program for Tanzanian trainees conducting research on cancers commonly encountered at ORCI and partner institutions." }
+    ],
+    aims: [
+      { title: "Long-term degree training", text: "Provide intensive academic instruction and research experience for PhD and master's-level candidates in relevant HIV-associated cancer research fields." },
+      { title: "Medium-term technical training", text: "Support three- to six-month technical training for postgraduates and health care providers in molecular pathology, cancer biology, bioinformatics, genomics, biostatistics, biobanking, cancer registry, and clinical or translational research." },
+      { title: "Technical workshops", text: "Deliver workshops that strengthen basic, clinical, implementation, genomics, bioinformatics, computational genomics, epidemiology, and biostatistics skills while expanding collaboration between partner institutions." }
+    ],
+    trainingPlan: [
+      { title: "Long-term master's, MMed, MS, or MPH training", text: "The training plan includes four long-term master's-level, MMed, MS, or MPH pathways for Tanzanian trainees." },
+      { title: "Long-term doctoral training", text: "The program supports doctoral-level training connected to cancer research and related biomedical disciplines." },
+      { title: "Medium-term skills training", text: "Medium-term training supports ten focused skills-development opportunities for Tanzania fellows and health care providers." },
+      { title: "Short-term workshops", text: "Short courses and workshops are expected to reach more than 250 participants across the training period." }
+    ],
+    trainingTracks: [
+      { title: "Clinical trials methods and management", text: "Training in clinical research design, study conduct, and management of cancer-focused clinical research activities." },
+      { title: "Public health, operational, and translational research", text: "Training in cancer prevention, epidemiology, cancer registry systems, biostatistics, data management, biobanking, and implementation-focused research." },
+      { title: "Laboratory-based cancer biology research", text: "Training in molecular biology, virology, pathology, diagnostics, viral oncology, immunology, and related laboratory research methods." },
+      { title: "Cancer genomics and bioinformatics", text: "Training in next-generation sequencing, data management, big data analytics, computational genomics, and genomics-informed research." }
+    ],
+    progress: [
+      { title: "Degree training", text: "Program progress reported in 2024 included PhD and MSc trainees enrolled through MUHAS and LSUHSC-New Orleans pathways." },
+      { title: "Medium-term training", text: "Three trainees completed three-month training placements at LSUHSC-New Orleans." },
+      { title: "Short-course training", text: "A biostatistics workshop was completed as part of short-term training activities." },
+      { title: "Responsible conduct of research", text: "Trainees completed responsible conduct of research training through MUHAS." }
+    ],
+    partners: ["Ocean Road Cancer Institute", "Stanley S. Scott Cancer Center, LSU Health New Orleans", "Muhimbili University of Health and Allied Sciences", "Tanzanian clinical and research collaborators", "U.S. academic partners"],
+    impact: "TAMTRP supports Tanzania's preparation for cancer research approaches that increasingly use molecular diagnostics, cancer genomics, data science, and translational research to improve understanding of HIV-associated and infection-associated malignancies.",
+    sustainability: [
+      { title: "Trainee-led research capacity", text: "The program supports the development of Tanzanian trainees and mentors who can lead locally relevant cancer research." },
+      { title: "Institutional collaboration", text: "TAMTRP strengthens collaboration among ORCI, MUHAS, LSU Health New Orleans, and other local and international partners." },
+      { title: "Research infrastructure", text: "The program supports infrastructure for diagnostics, data systems, biobanking, genomics, epidemiology, and translational cancer research." }
+    ],
+    teamImage: {
+      src: "assets/img/tamtrp-orci-team.jpg",
+      alt: "TAMTRP and ORCI team members at Ocean Road Cancer Institute",
+      caption: "TAMTRP and ORCI team members"
+    },
+    publications: "TAMTRP-related publications and trainee outputs are listed on the Publications page."
+  },
   projects: [
     {
       id: "keaap-kshv-immune",
@@ -197,7 +242,7 @@ const SITE_DATA = {
       theme: "Training",
       status: "Training Project",
       leads: "Program mentors",
-      description: "TRMTRIP/TAMTRP training projects support trainee-led research in Tanzania across oncology, diagnostics, pathology, epidemiology, biostatistics, and translational research.",
+      description: "TRMTRIP/TAMTRP training projects support Tanzania-led research capacity across HIV-associated and infection-associated cancers, molecular diagnostics, pathology, cancer genomics, bioinformatics, epidemiology, biostatistics, biobanking, cancer registry systems, clinical research, and translational research.",
       publications: "See Publications page"
     },
     {
