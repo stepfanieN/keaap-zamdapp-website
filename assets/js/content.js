@@ -292,22 +292,13 @@ const SITE_DATA = {
   ],
   labFacilities: [
     {
-      name: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory",
-      location: "University Teaching Hospitals, Zambia",
+      name: "KEAAP / UNZA / UTH Laboratory and Biorepository Facilities",
+      location: "University of Zambia and University Teaching Hospitals, Zambia",
       image: "assets/img/kaposi-sarcoma-research-lab.jpg",
       alt: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory at University Teaching Hospitals in Zambia",
-      description: "A Zambia-based clinical, pathology, biorepository, and laboratory facility supporting Kaposi sarcoma research, specimen handling, pathology-linked workflows, and research training.",
-      equipment: ["biosafety cabinets", "centrifuges", "cold storage", "microscopy access", "specimen tracking systems"],
-      services: ["clinical research support", "specimen processing", "biorepository coordination", "pathology-linked research workflows", "training support"]
-    },
-    {
-      name: "University Teaching Hospitals Research and Training Spaces",
-      location: "Lusaka, Zambia",
-      image: "assets/img/uth-main-entrance.jpg",
-      alt: "University Teaching Hospital entrance in Zambia",
-      description: "Clinical and institutional research spaces supporting Zambia-based studies, trainee engagement, clinical coordination, diagnostics collaboration, and data collection workflows.",
-      equipment: ["clinical workstations", "secure study documentation systems", "sample collection supplies", "data capture tools"],
-      services: ["participant-facing research workflows", "clinical coordination", "data collection", "training activities", "study documentation"]
+      description: "Zambia-based KEAAP/UNZA/UTH infrastructure supports clinical research, immunology and molecular testing workflows, specimen storage, pathology-linked research, and data entry for consortium studies.",
+      equipment: ["FACScan for CD4 counts", "high-speed centrifuges", "blood chemistry machine", "real-time PCR machine", "solution-based PCR machines", "three -80°C specimen freezers", "DNA sequencer", "HIV genotyping machine", "two Corbett real-time PCR analyzers", "microscope digital camera", "three computer data-entry workstations"],
+      services: ["CD4 testing support", "blood chemistry testing support", "PCR-based molecular workflows", "HIV genotyping support", "specimen processing and storage", "microscopy documentation", "data entry and study documentation"]
     },
     {
       name: "Ocean Road Cancer Institute Oncology and Research Facilities",
@@ -315,8 +306,8 @@ const SITE_DATA = {
       image: "assets/img/orci-front.jpg",
       alt: "Ocean Road Cancer Institute building in Dar es Salaam, Tanzania",
       description: "Tanzania-based oncology, pathology, autopsy, and translational research infrastructure supporting Kaposi sarcoma research, training, and tissue-based research activities.",
-      equipment: ["clinical oncology infrastructure", "pathology workspaces", "autopsy facility infrastructure", "cold storage", "specimen documentation systems"],
-      services: ["oncology research coordination", "pathology collaboration", "autopsy and tissue donation workflows", "specimen handling", "training activities"]
+      equipment: ["2-8°C refrigerators", "-20°C freezers", "-80°C freezers", "general laboratory equipment", "molecular laboratory equipment", "pathology and cytology laboratory equipment"],
+      services: ["oncology research coordination", "pathology and cytology workflows", "molecular laboratory support", "specimen handling and cold storage", "autopsy and tissue donation workflows", "training activities"]
     },
     {
       name: "Data Management and Biostatistics Core",
@@ -334,8 +325,8 @@ const SITE_DATA = {
       alt: "LSU Health New Orleans logo",
       fit: "contain",
       description: "U.S. academic partner laboratories and analytic teams support collaborative research methods, viral oncology, molecular assays, data analysis, mentorship, and scientific dissemination.",
-      equipment: ["molecular assay platforms", "proteomics and metabolomics collaboration", "spatial analysis collaboration", "biostatistical software", "secure data systems"],
-      services: ["assay collaboration", "methodologic support", "data analysis", "mentorship", "manuscript and grant support"]
+      equipment: ["Illumina NextSeq 500", "MiSeq", "iScan", "PCR systems", "cryostats", "microscopes", "imaging systems", "flow cytometers", "cell sorters", "centrifuges and related instruments"],
+      services: ["sequencing and genomics collaboration", "PCR-based assay support", "imaging and microscopy collaboration", "flow cytometry and cell sorting support", "methodologic support", "mentorship", "manuscript and grant support"]
     }
   ],
   facilityServices: [
