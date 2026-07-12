@@ -872,11 +872,11 @@
       ${pageHero(copy)}
       <section class="section">
         <div class="section-inner">
-          ${sectionHeader("Training community", "AMTRIP, TRMTRIP/TAMTRP, and ZAMDAPP support fellows, student trainees, clinicians, laboratory scientists, pathologists, and data-focused teams through mentorship, workshops, degree training, and project-based research.")}
+          ${sectionHeader("Training community")}
           <div class="grid three">
             ${renderInfoCard("Fellows and trainees", "Training activities support emerging investigators and technical teams working in HIV-associated cancer research, pathology, diagnostics, epidemiology, and data systems.")}
             ${renderInfoCard("Mentorship and workshops", "Mentorship, short courses, and workshops support scientific writing, research methods, ethics, biostatistics, bioinformatics, pathology, and laboratory methods.")}
-            ${renderInfoCard("Research outputs", "Trainee-associated publications and scholarly outputs are listed on the Publications page.", "publications.html")}
+            ${renderInfoCard("Research outputs", "Trainee-associated publications and scholarly outputs are maintained in the consortium publication database.", "publications.html")}
           </div>
         </div>
       </section>

@@ -131,7 +131,7 @@ const SITE_DATA = {
         caption: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory, UTHs"
       }
     ],
-    publications: "AMTRIP-related publications and trainee outputs are listed on the Publications page."
+    publications: "AMTRIP-related publications and trainee outputs are maintained in the consortium publication database."
   },
   tamtrpPage: {
     intro: "TRMTRIP/TAMTRP Tanzania is a ZAMDAPP-linked training program focused on strengthening Tanzania-led cancer research capacity through Ocean Road Cancer Institute and U.S. academic collaboration.",
@@ -176,7 +176,7 @@ const SITE_DATA = {
       alt: "TAMTRP and ORCI team members at Ocean Road Cancer Institute",
       caption: "TAMTRP and ORCI team members"
     },
-    publications: "TAMTRP-related publications and trainee outputs are listed on the Publications page."
+    publications: "TAMTRP-related publications and trainee outputs are maintained in the consortium publication database."
   },
   projects: [
     {
@@ -286,7 +286,7 @@ const SITE_DATA = {
       theme: "Biobank",
       status: "Active",
       leads: "Pathology and tissue research collaborators",
-      description: "This section describes ethical tissue research infrastructure, specimen governance, documentation, storage systems, quality control, and regulatory workflows.",
+      description: "Ethical tissue research infrastructure, specimen governance, documentation, storage systems, quality control, and regulatory workflows.",
       publications: "See Publications page"
     }
   ],
@@ -624,7 +624,7 @@ const SITE_I18N = {
       leads: "Leads",
       relatedOutputs: "Related outputs",
       zamdappInformation: "ZAMDAPP Information",
-      zamdappInformationIntro: "Selected ZAMDAPP research areas are summarized here for research navigation. Citations are listed on the Publications page.",
+      zamdappInformationIntro: "",
       keyInstitutions: "Key institutions",
       fellowsGallery: "Fellows gallery",
       trainingAreas: "Training areas",
@@ -637,7 +637,7 @@ const SITE_I18N = {
       biobankResearch: "Biobank / tissue research",
       searchProjects: "Search projects",
       projectFilters: "Explore the portfolio",
-      projectFiltersText: "Use the filters to browse by program, country, research theme, or status.",
+      projectFiltersText: "",
       viewDetails: "View summary",
       moreInformation: "More Information",
       projectStatus: "Status",
@@ -656,15 +656,15 @@ const SITE_I18N = {
         introTitle: "Advancing locally grounded research through international collaboration",
         introText: "The consortium brings together investigators, clinicians, pathologists, laboratory scientists, data specialists, and trainees working to improve public knowledge and research capacity for HIV-associated cancers in Sub-Saharan Africa.",
         pillarTitle: "Research pillars",
-        pillarIntro: "The site is organized around research activity, training, infrastructure, and scholarly outputs.",
+        pillarIntro: "",
         programTitle: "Research and training programs",
         themeTitle: "Cross-cutting research themes",
         whereTitle: "Where we work",
         whereIntro: "Consortium activities are organized across Zambia, Tanzania, and U.S. partner institutions, with country-specific summaries of research and training activity.",
         siteTitle: "Collaborating institutions",
-        siteIntro: "Partner logos identify collaborating institutions across the consortium.",
+        siteIntro: "",
         impactTitle: "Consortium at a glance",
-        impactIntro: "These figures summarize the current consortium structure and publication database.",
+        impactIntro: "",
         trainingTitle: "Training the next generation of African cancer researchers",
         trainingText: "The consortium supports fellows, students, clinicians, scientists, and data teams through mentorship, research methods training, laboratory and pathology capacity strengthening, data management support, and collaborative research projects.",
         publicationsTitle: "Selected publications and outputs",
@@ -743,12 +743,12 @@ const SITE_I18N = {
           }
         ],
         workTitle: "How the consortium works",
-        workIntro: "The public-facing platform is organized around institutional partnership, research practice, and training capacity rather than a single project or site.",
+        workIntro: "",
         fundingContextTitle: "Funding and institutional context",
-        fundingContextIntro: "Funding information is provided for transparency. The consortium's public purpose remains research collaboration, training, diagnostics, data quality, pathology capacity, and locally led evidence generation.",
+        fundingContextIntro: "",
         sections: [["Partner Institutions", "The consortium connects collaborating institutions in Zambia, Tanzania, and the United States through research, training, pathology, diagnostics, and data systems."], ["Research Approach", "The consortium emphasizes African-priority driven questions, cross-country collaboration, rigorous methods, and scholarly dissemination."], ["Training Approach", "The training model emphasizes mentorship, hands-on research participation, scientific writing, data quality, laboratory and pathology skills, and locally relevant cancer research questions."]]
       },
-      programs: { eyebrow: "Programs", title: "Programs that anchor the consortium", intro: "The site is organized around KEAAP and ZAMDAPP as parent platforms, with linked research projects, training initiatives, cores, pathology sections, and publication structures. AMTRIP Zambia and TRMTRIP/TAMTRP Tanzania are presented as regional training initiatives under ZAMDAPP rather than separate parent programs." },
+      programs: { eyebrow: "Programs", title: "Programs that anchor the consortium", intro: "KEAAP and ZAMDAPP serve as parent research platforms, with linked projects, training initiatives, cores, pathology sections, and publication structures. AMTRIP Zambia and TRMTRIP/TAMTRP Tanzania are presented as regional training initiatives under ZAMDAPP." },
       projects: {
         eyebrow: "Projects",
         title: "Consortium Project Portfolio",
@@ -762,7 +762,7 @@ const SITE_I18N = {
         }
       },
       sites: { eyebrow: "Sites", title: "Collaborating countries and institutions", intro: "Consortium activities are organized across Zambia, Tanzania, and U.S. partner institutions." },
-      training: { eyebrow: "Fellows & Training", title: "Fellows and Training", intro: "A training hub for AMTRIP/TRMTRIP fellows, student trainees, mentorship activities, training areas, and scholarly outputs." },
+      training: { eyebrow: "Fellows & Training", title: "Fellows and Training", intro: "Fellows, student trainees, clinicians, laboratory scientists, pathologists, and data-focused teams participate in mentorship, workshops, degree training, and project-based research." },
       publications: { eyebrow: "Publications", title: "Publication database", intro: "Search and filter scholarly outputs by program, year, topic, and country. Citations include DOI, PMID, and PMCID details." },
       news: { eyebrow: "News", title: "News and Updates", intro: "Updates for training workshops, fellows' achievements, publications, conference presentations, new collaborations, and program milestones." },
       contact: { eyebrow: "Contact", title: "Contact the consortium", intro: "For collaboration, training, publication, or program-related inquiries, please contact the consortium team using the form below.", formTitle: "Program inquiry", consent: "I consent to being contacted about this inquiry.", success: "Thank you. The consortium team will review your inquiry." },
@@ -830,7 +830,7 @@ const SITE_I18N = {
       leads: "Viongozi",
       relatedOutputs: "Matokeo yanayohusiana",
       zamdappInformation: "Taarifa za ZAMDAPP",
-      zamdappInformationIntro: "Maeneo yaliyochaguliwa ya utafiti wa ZAMDAPP yamefupishwa hapa kwa urambazaji wa utafiti. Nukuu ziko kwenye ukurasa wa Machapisho.",
+      zamdappInformationIntro: "",
       keyInstitutions: "Taasisi muhimu",
       fellowsGallery: "Orodha ya watafiti",
       trainingAreas: "Maeneo ya mafunzo",
@@ -843,7 +843,7 @@ const SITE_I18N = {
       biobankResearch: "Biobank / utafiti wa tishu",
       searchProjects: "Tafuta miradi",
       projectFilters: "Chunguza orodha ya miradi",
-      projectFiltersText: "Tumia vichujio kuangalia kwa programu, nchi, mada ya utafiti, au hali.",
+      projectFiltersText: "",
       viewDetails: "Tazama muhtasari",
       moreInformation: "Maelezo zaidi",
       projectStatus: "Hali",
@@ -862,15 +862,15 @@ const SITE_I18N = {
         introTitle: "Kuendeleza utafiti unaotokana na mahitaji ya ndani kupitia ushirikiano wa kimataifa",
         introText: "Muungano huwaleta pamoja wachunguzi, wahudumu wa kliniki, wanapatholojia, wanasayansi wa maabara, wataalamu wa data, na wanafunzi wanaofanya kazi kuboresha maarifa ya umma na uwezo wa utafiti kuhusu saratani zinazohusiana na VVU Afrika kusini mwa Sahara.",
         pillarTitle: "Nguzo za utafiti",
-        pillarIntro: "Tovuti imepangwa kuzunguka shughuli za utafiti, mafunzo, miundombinu, na matokeo ya kisayansi.",
+        pillarIntro: "",
         programTitle: "Programu za utafiti na mafunzo",
         themeTitle: "Mada zinazovuka programu",
         whereTitle: "Tunapofanya kazi",
         whereIntro: "Shughuli za muungano zimepangwa katika taasisi washirika Zambia, Tanzania, na Marekani.",
         siteTitle: "Taasisi shirikishi",
-        siteIntro: "Nembo za washirika zinatambua taasisi shirikishi katika muungano.",
+        siteIntro: "",
         impactTitle: "Muungano kwa ufupi",
-        impactIntro: "Takwimu hizi zinaeleza muundo wa sasa wa muungano na hifadhidata ya machapisho.",
+        impactIntro: "",
         trainingTitle: "Kufundisha kizazi kijacho cha watafiti wa saratani Afrika",
         trainingText: "Muungano unasaidia watafiti, wanafunzi, wahudumu wa kliniki, wanasayansi, na timu za data kupitia ushauri, mafunzo ya mbinu za utafiti, kuimarisha maabara na patholojia, msaada wa usimamizi wa data, na miradi shirikishi ya utafiti.",
         publicationsTitle: "Machapisho na matokeo yaliyochaguliwa",
@@ -949,12 +949,12 @@ const SITE_I18N = {
           }
         ],
         workTitle: "Jinsi muungano unavyofanya kazi",
-        workIntro: "Jukwaa la umma limepangwa kuzunguka ushirikiano wa taasisi, mbinu za utafiti, na uwezo wa mafunzo badala ya mradi mmoja au eneo moja.",
+        workIntro: "",
         fundingContextTitle: "Muktadha wa ufadhili na taasisi",
-        fundingContextIntro: "Taarifa za ufadhili hutolewa kwa uwazi. Lengo la umma la muungano linaendelea kuwa ushirikiano wa utafiti, mafunzo, uchunguzi, ubora wa data, uwezo wa patholojia, na uzalishaji wa ushahidi unaoongozwa ndani.",
+        fundingContextIntro: "",
         sections: [["Taasisi Washirika", "Muungano unaunganisha taasisi shirikishi Zambia, Tanzania, na Marekani kupitia utafiti, mafunzo, patholojia, uchunguzi, na mifumo ya data."], ["Mbinu ya Utafiti", "Muungano unasisitiza maswali yanayotokana na vipaumbele vya Afrika, ushirikiano wa nchi mbalimbali, mbinu thabiti, na usambazaji wa kisayansi."], ["Mbinu ya Mafunzo", "Mfano wa mafunzo unasisitiza ushauri, ushiriki wa vitendo katika utafiti, uandishi wa kisayansi, ubora wa data, na maswali ya utafiti yanayohusiana na mahitaji ya ndani."]]
       },
-      programs: { eyebrow: "Programu", title: "Programu zinazoongoza muungano", intro: "Tovuti imepangwa kuzunguka KEAAP na ZAMDAPP kama majukwaa makuu, pamoja na miradi ya utafiti, mipango ya mafunzo, vitengo, sehemu za patholojia, na machapisho. AMTRIP Zambia na TRMTRIP/TAMTRP Tanzania zinaonyeshwa kama mipango ya mafunzo ya kikanda chini ya ZAMDAPP." },
+      programs: { eyebrow: "Programu", title: "Programu zinazoongoza muungano", intro: "KEAAP na ZAMDAPP ni majukwaa makuu ya utafiti, pamoja na miradi, mipango ya mafunzo, vitengo, sehemu za patholojia, na machapisho. AMTRIP Zambia na TRMTRIP/TAMTRP Tanzania zinaonyeshwa kama mipango ya mafunzo ya kikanda chini ya ZAMDAPP." },
       projects: {
         eyebrow: "Miradi",
         title: "Orodha ya Miradi ya Muungano",
@@ -968,7 +968,7 @@ const SITE_I18N = {
         }
       },
       sites: { eyebrow: "Maeneo", title: "Nchi na taasisi shirikishi", intro: "Shughuli za muungano zimepangwa Zambia, Tanzania, na taasisi washirika za Marekani." },
-      training: { eyebrow: "Watafiti & Mafunzo", title: "Watafiti na Mafunzo", intro: "Kituo cha mafunzo cha watafiti wa AMTRIP/TRMTRIP, wanafunzi, shughuli za ushauri, maeneo ya mafunzo, na matokeo ya kisayansi." },
+      training: { eyebrow: "Watafiti & Mafunzo", title: "Watafiti na Mafunzo", intro: "Watafiti, wanafunzi, wahudumu wa kliniki, wanasayansi wa maabara, wataalamu wa patholojia, na timu za data hushiriki katika ushauri, warsha, mafunzo ya shahada, na utafiti wa miradi." },
       publications: { eyebrow: "Machapisho", title: "Hifadhidata ya machapisho", intro: "Tafuta na chuja matokeo ya kisayansi kwa programu, mwaka, mada, na nchi. Nukuu zinajumuisha maelezo ya DOI, PMID, na PMCID." },
       news: { eyebrow: "Habari", title: "Habari na Taarifa", intro: "Taarifa kuhusu warsha za mafunzo, mafanikio ya watafiti, machapisho, mawasilisho ya mikutano, ushirikiano mpya, na hatua za programu." },
       contact: { eyebrow: "Mawasiliano", title: "Wasiliana na muungano", intro: "Kwa maswali kuhusu ushirikiano, mafunzo, machapisho, au programu, tafadhali wasiliana na timu ya muungano kupitia fomu hapa chini.", formTitle: "Swali kuhusu programu", consent: "Ninakubali kuwasiliana nami kuhusu swali hili.", success: "Asante. Timu ya muungano itapitia swali lako." },
