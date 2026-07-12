@@ -2,6 +2,7 @@
   const pageKey = document.body.dataset.page || "home";
   const storageKey = "hacc-language";
   const programPageMap = { keaap: "keaap", zamdapp: "zamdapp", amtrip: "amtrip", trmtrip: "trmtrip" };
+  const projectPageMap = Object.fromEntries(SITE_DATA.projects.map((project) => [`project-${project.id}`, project.id]));
   let lang = getStoredLanguage();
 
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -70,6 +71,10 @@
       const program = SITE_DATA.programs.find((item) => item.id === programPageMap[pageKey]);
       return `${program.name} | ${copy.siteTitle}`;
     }
+    if (projectPageMap[pageKey]) {
+      const project = SITE_DATA.projects.find((item) => item.id === projectPageMap[pageKey]);
+      return `${project.title} | ${copy.siteTitle}`;
+    }
     const page = copy.pages[pageKey];
     if (page && pageKey !== "home") return `${page.title} | ${copy.siteTitle}`;
     return copy.siteTitle;
@@ -91,7 +96,7 @@
           <span class="sr-only">${esc(label("menu"))}</span>
         </button>
         <nav class="primary-nav" id="primary-nav" aria-label="${esc(label("primaryNav"))}">
-          ${copy.nav.map(([text, href, key]) => `<a class="nav-link ${key === pageKey ? "is-active" : ""}" href="${esc(href)}">${esc(text)}</a>`).join("")}
+          ${copy.nav.map(([text, href, key]) => `<a class="nav-link ${navItemActive(key) ? "is-active" : ""}" href="${esc(href)}">${esc(text)}</a>`).join("")}
         </nav>
         <div class="language-toggle" aria-label="${esc(label("language"))}">
           <button type="button" data-lang="en" aria-pressed="${lang === "en"}">EN</button>
@@ -111,6 +116,12 @@
     $$("[data-lang]").forEach((button) => {
       button.addEventListener("click", () => setLanguage(button.dataset.lang));
     });
+  }
+
+  function navItemActive(key) {
+    if (key === pageKey) return true;
+    if (key === "programs" && projectPageMap[pageKey]) return true;
+    return false;
   }
 
   function renderFooter() {
@@ -147,10 +158,12 @@
     else if (pageKey === "amtrip") main.innerHTML = renderAmtripPage();
     else if (pageKey === "trmtrip") main.innerHTML = renderTrmtripPage();
     else if (programPageMap[pageKey]) main.innerHTML = renderProgramDetail(programPageMap[pageKey]);
+    else if (projectPageMap[pageKey]) main.innerHTML = renderProjectDetailPage(projectPageMap[pageKey]);
     else if (pageKey === "projects") {
       main.innerHTML = renderProjects();
       bindProjectsFilter();
     } else if (pageKey === "sites") main.innerHTML = renderSites();
+    else if (pageKey === "facilities") main.innerHTML = renderFacilities();
     else if (pageKey === "training") main.innerHTML = renderTraining();
     else if (pageKey === "publications") {
       main.innerHTML = renderPublications();
@@ -593,8 +606,15 @@
           <div class="grid three">
             ${renderInfoCard("Data Management and Biostatistics Core", pageCopy("data-core").intro, "data-core.html")}
             ${renderInfoCard("Pathology / POT", pageCopy("pathology").intro, "pathology.html")}
+            ${renderInfoCard(pageCopy("facilities").title, pageCopy("facilities").intro, "facilities.html")}
             ${renderInfoCard(pageCopy("pathology").biobankTitle, pageCopy("pathology").biobankText, "pathology.html#biobank")}
           </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Project sub-pages")}
+          <div class="grid three">${SITE_DATA.projects.map(renderProjectCard).join("")}</div>
         </div>
       </section>
     `;
@@ -840,6 +860,110 @@
           <p class="empty-state" id="project-empty" hidden>${esc(label("noResults"))}</p>
         </div>
       </section>
+    `;
+  }
+
+  function renderProjectDetailPage(id) {
+    const project = SITE_DATA.projects.find((item) => item.id === id);
+    if (!project) return renderProjects();
+    const program = SITE_DATA.programs.find((item) => item.name === project.program || item.id === project.program.toLowerCase());
+    const related = SITE_DATA.projects.filter((item) => item.id !== project.id && (item.program === project.program || item.theme === project.theme)).slice(0, 3);
+    return `
+      ${pageHero({ eyebrow: project.program, title: project.title, intro: project.description })}
+      <section class="breadcrumb-band">
+        <div class="section-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="programs.html">Programs</a>
+            <span aria-hidden="true">/</span>
+            <a href="projects.html">Projects</a>
+            <span aria-hidden="true">/</span>
+            <span>${esc(project.title)}</span>
+          </nav>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner detail-layout">
+          <aside class="detail-aside">
+            <h2>Project Details</h2>
+            <dl>
+              <dt>${esc(label("program"))}</dt><dd>${esc(project.program)}</dd>
+              <dt>${esc(label("country"))}</dt><dd>${esc(project.countries.join(", "))}</dd>
+              <dt>${esc(label("theme"))}</dt><dd>${esc(project.theme)}</dd>
+              <dt>${esc(label("projectStatus"))}</dt><dd>${esc(project.status)}</dd>
+              <dt>${esc(label("leads"))}</dt><dd>${esc(project.leads)}</dd>
+            </dl>
+          </aside>
+          <div class="project-detail-main">
+            ${sectionHeader("Public Project Summary")}
+            <p>${esc(project.description)}</p>
+            ${project.detail ? `<p>${esc(project.detail)}</p>` : ""}
+            <div class="project-detail-actions">
+              <a class="button button-primary" href="publications.html">${esc(label("relatedOutputs"))}</a>
+              <a class="button button-secondary" href="projects.html#${esc(project.id)}">Back to Project Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      ${related.length ? `
+        <section class="section section-muted">
+          <div class="section-inner">
+            ${sectionHeader("Related Project Sub-pages")}
+            <div class="grid three">${related.map(renderProjectCard).join("")}</div>
+          </div>
+        </section>
+      ` : ""}
+    `;
+  }
+
+  function renderFacilities() {
+    const copy = pageCopy("facilities");
+    return `
+      ${pageHero(copy)}
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader(copy.typesTitle)}
+          <div class="grid three">${SITE_DATA.labFacilities.map(renderFacilityCard).join("")}</div>
+        </div>
+      </section>
+      <section class="section section-muted">
+        <div class="section-inner">
+          ${sectionHeader(copy.servicesTitle)}
+          <div class="grid three">${SITE_DATA.facilityServices.map(renderFacilityServiceCard).join("")}</div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderFacilityCard(facility) {
+    return `
+      <article class="card facility-card" data-fit="${esc(facility.fit || "cover")}">
+        <img src="${esc(facility.image || "assets/img/site-placeholder.svg")}" alt="${esc(facility.alt || facility.name)}">
+        <div>
+          <p class="tag">${esc(facility.location)}</p>
+          <h3>${esc(facility.name)}</h3>
+          <p>${esc(facility.description)}</p>
+          <dl>
+            <dt>Equipment</dt><dd>${renderFacilityList(facility.equipment)}</dd>
+            <dt>Services</dt><dd>${renderFacilityList(facility.services)}</dd>
+          </dl>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderFacilityList(items) {
+    return `<ul class="facility-list">${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
+  }
+
+  function renderFacilityServiceCard(service) {
+    return `
+      <article class="card">
+        <p class="tag">${esc(service.type)}</p>
+        <h3>${esc(service.title)}</h3>
+        <p>${esc(service.description)}</p>
+      </article>
     `;
   }
 
@@ -1192,7 +1316,7 @@
   }
 
   function renderProjectCard(project) {
-    const detailHref = pageKey === "projects" ? `#${project.id}` : `projects.html#${project.id}`;
+    const detailHref = projectPageHref(project);
     return `
       <article class="card project-card" id="${esc(project.id)}" data-program="${esc(project.program)}" data-country="${esc(project.countries.join("|"))}" data-theme="${esc(project.theme)}" data-status="${esc(project.status)}">
         <div class="project-tag-row">
@@ -1208,6 +1332,10 @@
         </div>
       </article>
     `;
+  }
+
+  function projectPageHref(project) {
+    return `project-${project.id}.html`;
   }
 
   function renderProjectGroups() {

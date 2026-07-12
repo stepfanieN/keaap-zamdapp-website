@@ -290,6 +290,86 @@ const SITE_DATA = {
       publications: "See Publications page"
     }
   ],
+  labFacilities: [
+    {
+      name: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory",
+      location: "University Teaching Hospitals, Zambia",
+      image: "assets/img/kaposi-sarcoma-research-lab.jpg",
+      alt: "Kaposi Sarcoma Clinic, Pathology, Biorepository and Laboratory at University Teaching Hospitals in Zambia",
+      description: "A Zambia-based clinical, pathology, biorepository, and laboratory facility supporting Kaposi sarcoma research, specimen handling, pathology-linked workflows, and research training.",
+      equipment: ["biosafety cabinets", "centrifuges", "cold storage", "microscopy access", "specimen tracking systems"],
+      services: ["clinical research support", "specimen processing", "biorepository coordination", "pathology-linked research workflows", "training support"]
+    },
+    {
+      name: "University Teaching Hospitals Research and Training Spaces",
+      location: "Lusaka, Zambia",
+      image: "assets/img/uth-main-entrance.jpg",
+      alt: "University Teaching Hospital entrance in Zambia",
+      description: "Clinical and institutional research spaces supporting Zambia-based studies, trainee engagement, clinical coordination, diagnostics collaboration, and data collection workflows.",
+      equipment: ["clinical workstations", "secure study documentation systems", "sample collection supplies", "data capture tools"],
+      services: ["participant-facing research workflows", "clinical coordination", "data collection", "training activities", "study documentation"]
+    },
+    {
+      name: "Ocean Road Cancer Institute Oncology and Research Facilities",
+      location: "Dar es Salaam, Tanzania",
+      image: "assets/img/orci-front.jpg",
+      alt: "Ocean Road Cancer Institute building in Dar es Salaam, Tanzania",
+      description: "Tanzania-based oncology, pathology, autopsy, and translational research infrastructure supporting Kaposi sarcoma research, training, and tissue-based research activities.",
+      equipment: ["clinical oncology infrastructure", "pathology workspaces", "autopsy facility infrastructure", "cold storage", "specimen documentation systems"],
+      services: ["oncology research coordination", "pathology collaboration", "autopsy and tissue donation workflows", "specimen handling", "training activities"]
+    },
+    {
+      name: "Data Management and Biostatistics Core",
+      location: "Cross-site",
+      image: "assets/img/hero-research.svg",
+      alt: "Research data and collaboration graphic",
+      description: "A cross-program core supporting data systems, study monitoring, data quality, harmonization, statistical analysis planning, reporting, and manuscript and grant support.",
+      equipment: ["REDCap systems", "secure databases", "quality-control workflows", "analysis workstations", "reporting templates"],
+      services: ["database development", "data quality review", "statistical analysis planning", "study monitoring", "reproducible reporting"]
+    },
+    {
+      name: "Collaborating U.S. Partner Laboratories",
+      location: "United States",
+      image: "assets/img/lsu-health-new-orleans-logo.png",
+      alt: "LSU Health New Orleans logo",
+      fit: "contain",
+      description: "U.S. academic partner laboratories and analytic teams support collaborative research methods, viral oncology, molecular assays, data analysis, mentorship, and scientific dissemination.",
+      equipment: ["molecular assay platforms", "proteomics and metabolomics collaboration", "spatial analysis collaboration", "biostatistical software", "secure data systems"],
+      services: ["assay collaboration", "methodologic support", "data analysis", "mentorship", "manuscript and grant support"]
+    }
+  ],
+  facilityServices: [
+    {
+      type: "Clinical Research",
+      title: "Study coordination and clinical workflows",
+      description: "Support for recruitment workflows, clinical data collection, study documentation, referral coordination, and trainee participation in public-facing research activities."
+    },
+    {
+      type: "Pathology",
+      title: "Diagnostic and tissue-linked research support",
+      description: "Pathology collaboration, diagnostic classification support, tissue documentation, quality workflows, and integration with translational research questions."
+    },
+    {
+      type: "Biorepository",
+      title: "Specimen governance and storage workflows",
+      description: "Specimen processing, documentation, cold storage coordination, chain-of-custody practices, and ethical tissue research support."
+    },
+    {
+      type: "Laboratory",
+      title: "Molecular and immunology-linked research methods",
+      description: "Support for KSHV-related assays, molecular methods, collaborative proteomics/metabolomics workflows, and training in laboratory research practice."
+    },
+    {
+      type: "Data",
+      title: "Data management and biostatistics",
+      description: "REDCap/database support, data quality review, harmonization, study monitoring, statistical analysis planning, and reproducible reporting."
+    },
+    {
+      type: "Training",
+      title: "Hands-on research capacity development",
+      description: "Training activities for fellows, students, clinicians, laboratory scientists, pathologists, and data teams through mentored project-based research."
+    }
+  ],
   themes: ["Kaposi sarcoma", "Ocular surface squamous neoplasia", "HIV-associated malignancies", "Viral oncology", "Pathology and diagnostics", "Biostatistics and data management", "Biobanking and tissue research", "Training and mentorship", "Cancer epidemiology", "Implementation science"],
   sites: [
     {
@@ -536,6 +616,7 @@ const SITE_I18N = {
       ["Programs", "programs.html", "programs"],
       ["Projects", "projects.html", "projects"],
       ["Sites", "sites.html", "sites"],
+      ["Facilities", "facilities.html", "facilities"],
       ["Fellows & Training", "training.html", "training"],
       ["Publications", "publications.html", "publications"],
       ["News", "news.html", "news"],
@@ -717,6 +798,13 @@ const SITE_I18N = {
         }
       },
       sites: { eyebrow: "Sites", title: "Collaborating countries and institutions", intro: "Consortium activities are organized across Zambia, Tanzania, and U.S. partner institutions." },
+      facilities: {
+        eyebrow: "Facilities",
+        title: "Laboratory, Pathology, Biorepository, and Data Facilities",
+        intro: "The consortium uses clinical, laboratory, pathology, biorepository, autopsy, data, and training infrastructure across Zambia, Tanzania, and U.S. partner institutions.",
+        typesTitle: "Facility types",
+        servicesTitle: "Services and capabilities"
+      },
       training: { eyebrow: "Fellows & Training", title: "Fellows and Training", intro: "Fellows, student trainees, clinicians, laboratory scientists, pathologists, and data-focused teams participate in mentorship, workshops, degree training, and project-based research." },
       publications: { eyebrow: "Publications", title: "Publication database", intro: "Search and filter scholarly outputs by program, year, topic, and country. Citations include DOI, PMID, and PMCID details." },
       news: { eyebrow: "News", title: "News and Updates", intro: "Updates for training workshops, fellows' achievements, publications, conference presentations, new collaborations, and program milestones." },
@@ -742,6 +830,7 @@ const SITE_I18N = {
       ["Programu", "programs.html", "programs"],
       ["Miradi", "projects.html", "projects"],
       ["Maeneo", "sites.html", "sites"],
+      ["Miundombinu", "facilities.html", "facilities"],
       ["Watafiti & Mafunzo", "training.html", "training"],
       ["Machapisho", "publications.html", "publications"],
       ["Habari", "news.html", "news"],
@@ -923,6 +1012,13 @@ const SITE_I18N = {
         }
       },
       sites: { eyebrow: "Maeneo", title: "Nchi na taasisi shirikishi", intro: "Shughuli za muungano zimepangwa Zambia, Tanzania, na taasisi washirika za Marekani." },
+      facilities: {
+        eyebrow: "Miundombinu",
+        title: "Maabara, Patholojia, Biorepository, na Mifumo ya Data",
+        intro: "Muungano hutumia miundombinu ya kliniki, maabara, patholojia, biorepository, autopsy, data, na mafunzo katika Zambia, Tanzania, na taasisi washirika za Marekani.",
+        typesTitle: "Aina za miundombinu",
+        servicesTitle: "Huduma na uwezo"
+      },
       training: { eyebrow: "Watafiti & Mafunzo", title: "Watafiti na Mafunzo", intro: "Watafiti, wanafunzi, wahudumu wa kliniki, wanasayansi wa maabara, wataalamu wa patholojia, na timu za data hushiriki katika ushauri, warsha, mafunzo ya shahada, na utafiti wa miradi." },
       publications: { eyebrow: "Machapisho", title: "Hifadhidata ya machapisho", intro: "Tafuta na chuja matokeo ya kisayansi kwa programu, mwaka, mada, na nchi. Nukuu zinajumuisha maelezo ya DOI, PMID, na PMCID." },
       news: { eyebrow: "Habari", title: "Habari na Taarifa", intro: "Taarifa kuhusu warsha za mafunzo, mafanikio ya watafiti, machapisho, mawasilisho ya mikutano, ushirikiano mpya, na hatua za programu." },
