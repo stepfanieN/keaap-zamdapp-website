@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Research collaboration placeholder image</title>
+  <desc id="desc">Abstract editorial image with laboratory, map, and clinical research references.</desc>
+  <rect width="1600" height="900" fill="#f7f4ee"/>
+  <path d="M0 725c190-88 355-109 552-71 221 42 392 35 606-46 171-65 313-82 442-42v334H0z" fill="#dbe9e4"/>
+  <rect x="102" y="125" width="502" height="338" rx="28" fill="#12324a"/>
+  <rect x="144" y="174" width="184" height="24" rx="12" fill="#c89252"/>
+  <rect x="144" y="234" width="360" height="16" rx="8" fill="#e5edf0" opacity=".88"/>
+  <rect x="144" y="274" width="300" height="16" rx="8" fill="#e5edf0" opacity=".72"/>
+  <rect x="144" y="314" width="390" height="16" rx="8" fill="#e5edf0" opacity=".58"/>
+  <circle cx="488" cy="198" r="54" fill="#6eaaa0"/>
+  <path d="M782 187c68-41 154-42 224-2 88 50 136 41 222 5 65-28 129-17 171 31 45 50 51 126 15 184-44 72-131 94-205 55-91-47-151-36-238 18-78 48-179 27-232-49-54-78-35-193 43-242z" fill="#fff" stroke="#d9dedf" stroke-width="5"/>
+  <path d="M889 303h331M1056 198v211M944 228l236 154M1182 229 933 386" stroke="#6eaaa0" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <circle cx="889" cy="303" r="27" fill="#c89252"/>
+  <circle cx="1056" cy="198" r="24" fill="#12324a"/>
+  <circle cx="1220" cy="303" r="24" fill="#12324a"/>
+  <circle cx="1056" cy="409" r="24" fill="#12324a"/>
+  <rect x="901" y="568" width="386" height="154" rx="24" fill="#fff" stroke="#d9dedf" stroke-width="5"/>
+  <path d="M975 604v77c0 21 16 37 37 37h164c21 0 37-16 37-37v-77" fill="none" stroke="#12324a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M1018 603v-60h152v60" fill="none" stroke="#6eaaa0" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="719" cy="690" r="48" fill="#c89252"/>
+  <circle cx="781" cy="690" r="48" fill="#6eaaa0"/>
+  <circle cx="843" cy="690" r="48" fill="#12324a"/>
+</svg>
