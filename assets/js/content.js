@@ -356,6 +356,48 @@ const SITE_DATA = {
     { name: "Alumni Placeholder", country: "Zambia", program: "AMTRIP", period: "2024-2025", area: "Clinical outcomes and mentorship", bio: "Alumni public bio placeholder.", output: "Selected output placeholder", role: "Approved current role placeholder" }
   ],
   teamGovernance: {
+    organizationChart: {
+      image: "assets/img/consortium-organization-chart.png",
+      alt: "Consortium organization chart showing principal investigators, steering committee, external advisory panel, project teams, administrative core, data management and integration core, and career development core.",
+      sections: [
+        {
+          title: "Principal Investigators",
+          people: ["Charles Wood (LSU)", "Owen Ngalamika (UTH)", "Julius Mwaiselage (ORCI)"]
+        },
+        {
+          title: "Steering Committee",
+          people: ["Principal Investigators", "Associate Directors", "Project Leads", "Core Leads"]
+        },
+        {
+          title: "External Advisory Panel",
+          people: ["External advisory members"]
+        },
+        {
+          title: "Administrative Core",
+          people: ["Directors: Principal Investigators", "Associate Directors: John West (LSU), Catherine Chunda-Liyoka (UTH), John Ngowi (ORCI)"]
+        },
+        {
+          title: "Data Management and Integration Core",
+          people: ["Tekeda Ferguson (LSU)", "Stepfanie Siyumbwa (UTH)", "Chacha Mwita (ORCI)"]
+        },
+        {
+          title: "Career Development Core",
+          people: ["Chipepo Kankasa (UTH)", "Julius Mwaiselage (ORCI)", "John West (LSU)"]
+        },
+        {
+          title: "Project 1: Early KS, Staging, and Care",
+          people: ["Crispin Kahesa (ORCI)", "Susan Msadabwe (CDH)", "Mike Hagensee (LSU)"]
+        },
+        {
+          title: "Project 2: KS Immune Response",
+          people: ["Salum Lidenge (ORCI)", "Owen Ngalamika (UTH)", "John West (LSU)"]
+        },
+        {
+          title: "Project 3: KS Reservoirs",
+          people: ["Peter Julius (UTH)", "For Yue Tso (LSU)", "Angela Mlole (ORCI)"]
+        }
+      ]
+    },
     institutions: [
       "Ocean Road Cancer Institute (ORCI), Tanzania",
       "Muhimbili University of Health and Allied Sciences (MUHAS)",
@@ -364,8 +406,9 @@ const SITE_DATA = {
       "University of Zambia School of Medicine"
     ],
     administration: [
-      { name: "Dr. Julius Mwaiselage", role: "Program Director", affiliation: "Ocean Road Cancer Institute and consortium leadership" },
-      { name: "Dr. Charles Wood", role: "Program Director", affiliation: "Consortium leadership" },
+      { name: "Dr. Charles Wood", role: "Principal Investigator", affiliation: "LSU" },
+      { name: "Dr. Owen Ngalamika", role: "Principal Investigator", affiliation: "University Teaching Hospitals" },
+      { name: "Dr. Julius Mwaiselage", role: "Principal Investigator", affiliation: "Ocean Road Cancer Institute" },
       { name: "Dr. Salum Lidenge", role: "Program Coordinator", affiliation: "Ocean Road Cancer Institute, Dar es Salaam, Tanzania" }
     ],
     advisoryBoard: [

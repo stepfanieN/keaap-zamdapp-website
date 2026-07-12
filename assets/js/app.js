@@ -742,6 +742,7 @@
     const governance = SITE_DATA.teamGovernance;
     return `
       ${pageHero({ eyebrow: "Team", title: "Team and Collaborators", intro: "The consortium brings together investigators, clinicians, pathologists, laboratory scientists, data specialists, trainees, and institutional partners across Zambia, Tanzania, and the United States." })}
+      ${renderOrganizationChartSection(governance.organizationChart)}
       <section class="section">
         <div class="section-inner">
           ${sectionHeader("Administration", "Program leadership and coordination for consortium research and training activities.")}
@@ -782,6 +783,29 @@
           <div class="grid two">${topLevelPrograms().map((program) => renderInfoCard(program.name, program.fullName, program.page)).join("")}</div>
         </div>
       </section>
+    `;
+  }
+
+  function renderOrganizationChartSection(chart) {
+    return `
+      <section class="section">
+        <div class="section-inner">
+          ${sectionHeader("Organization Chart", "Consortium leadership, advisory, project, and core structures.")}
+          <figure class="organization-chart-figure">
+            <img src="${esc(chart.image)}" alt="${esc(chart.alt)}">
+          </figure>
+          <div class="org-chart-grid">${chart.sections.map(renderOrganizationChartCard).join("")}</div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderOrganizationChartCard(section) {
+    return `
+      <article class="card org-chart-card">
+        <h3>${esc(section.title)}</h3>
+        <ul>${section.people.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>
+      </article>
     `;
   }
 
