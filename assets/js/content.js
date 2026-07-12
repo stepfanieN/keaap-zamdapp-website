@@ -122,13 +122,13 @@ const SITE_DATA = {
       },
       {
         src: "assets/img/kaposi-sarcoma-clinic.jpg",
-        alt: "Kaposi sarcoma clinic and training building in Zambia",
-        caption: "Kaposi sarcoma clinic and training site"
+        alt: "Kaposi Sarcoma Clinic at University Teaching Hospitals in Zambia",
+        caption: "Kaposi Sarcoma Clinic, UTHs"
       },
       {
         src: "assets/img/kaposi-sarcoma-research-lab.jpg",
-        alt: "Kaposi sarcoma research and training laboratory building in Zambia",
-        caption: "Kaposi sarcoma research and training laboratory"
+        alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia",
+        caption: "Kaposi Sarcoma Laboratory, UTHs"
       }
     ],
     publications: "AMTRIP-related publications and trainee outputs are listed on the Publications page."
@@ -360,13 +360,13 @@ const SITE_DATA = {
     },
     {
       src: "assets/img/kaposi-sarcoma-clinic.jpg",
-      alt: "Kaposi sarcoma clinic and training building in Zambia",
-      caption: "Kaposi sarcoma clinic and training site"
+      alt: "Kaposi Sarcoma Clinic at University Teaching Hospitals in Zambia",
+      caption: "Kaposi Sarcoma Clinic, UTHs"
     },
     {
       src: "assets/img/kaposi-sarcoma-research-lab.jpg",
-      alt: "Kaposi sarcoma research and training laboratory building in Zambia",
-      caption: "Kaposi sarcoma research and training laboratory"
+      alt: "Kaposi Sarcoma Laboratory at University Teaching Hospitals in Zambia",
+      caption: "Kaposi Sarcoma Laboratory, UTHs"
     }
   ],
   homePillars: [
