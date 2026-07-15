@@ -58,3 +58,6 @@ The website can then be viewed at:
 The final publication approach uses GitHub Pages. This allows the consortium to host the website publicly without paying for a conventional web-hosting service. The project folder can be uploaded to a public GitHub repository, after which GitHub Pages can be enabled from the repository settings.
 
 The completed website now provides a central platform for documenting the consortium’s research, training, partnerships, publications, and scientific contributions. It was designed not only as a public information website, but also as a living record of the consortium’s progress and a platform that can continue to grow as new projects, fellows, publications, institutions, and research findings are added.
+
+Acknowledgement of development support: The KEAAP-ZAMDAPP consortium website was conceptualised and directed by Stepfanie Namatama Siyumbwa, with programme information and content provided by the consortium team. OpenAI Codex was used to support website coding, content organisation, troubleshooting, and language refinement. The project team retained responsibility for all substantive content, design choices, factual verification, and final approval.
+
